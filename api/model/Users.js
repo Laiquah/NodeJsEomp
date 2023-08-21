@@ -1,4 +1,4 @@
-const db = require("../.config");
+const db = require("../config");
 const { hash, compare, hashSync } = require("bcrypt");
 
 class Users {
