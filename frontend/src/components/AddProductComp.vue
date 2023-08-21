@@ -17,7 +17,7 @@
           <input placeholder="product ID" type="text">
           <input placeholder="product Name" type="text">
           <input placeholder="quantity" type="number">
-          <input placeholder="amount" type="number">
+          <input placeholder="price" type="number">
           <input placeholder="category" type="text">
           <input placeholder="product image" type="text">
         </div>
