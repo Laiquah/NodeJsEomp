@@ -1,8 +1,8 @@
 <template>
     <div>
         <h1>products</h1>
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="d-flex mb-2" role="search">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
             <button class="btn" type="submit">Search</button>
         </form>
         <div class="row" v-if="products">
@@ -64,4 +64,5 @@ import Spinner from '../components/SpinnerComp.vue'
     background-color: #f7f4f1;
     box-shadow: 4px 4px black;
   }
+  
 </style>
