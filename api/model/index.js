@@ -1,3 +1,7 @@
-const express = require('express')
-const routes = express.Router()
-const bodyParser = require('body-parser')
+const { Users } = require('./Users')
+const { Products } = require('./Products')
+
+module.exports = {
+    users: new Users(),
+    products: new Products()
+}
