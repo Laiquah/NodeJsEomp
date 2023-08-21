@@ -14,4 +14,14 @@ function createToken(user) {
   );
 }
 
-module.exports = { createToken }
+function verifyAUser(token) {
+  try {
+    const dec = verify(token, process.env.SECRET_KEY);
+    return dec;
+  } catch (e) {
+    console.log(e);
+    return null;
+  }
+}
+
+module.exports = { createToken, verifyAUser };
