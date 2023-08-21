@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+html,
+body{
+    overflow-x: hidden;
+}
+.table{
+    background-color: rgb(254, 254, 189) !important;
+}
+
+body{
+    text-align:center;
+    background-color: rgb(254, 254, 189) !important;
+}

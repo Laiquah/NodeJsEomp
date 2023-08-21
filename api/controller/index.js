@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const { verifyAToken, verifyAUser } = require("../middleware/AuthenticateUser");
+const { verifyAToken } = require("../middleware/AuthenticateUser");
 const routes = express.Router();
 const { users, products } = require("../model");
 
@@ -29,7 +29,7 @@ routes.get("/products", (req, res) => {
   products.fetchProducts(req, res);
 });
 routes.get("/product/:prodID", (req, res) => {
-  products.fetchProduct;
+  products.fetchProduct(req, res);
 });
 routes.post("/product", bodyParser.json(), (req, res) => {
   products.addProduct(req, res);
@@ -48,7 +48,7 @@ exports.profile = (req, res, next) => {
       message: "Access denied. Token not provided",
     });
   }
-  const decUser = verifyAUser(token);
+  const decUser = verifyAToken(token);
   if (!decUser) {
     return res.status(403).json({ message: "Invalid token" });
   }

@@ -14,7 +14,7 @@ function createToken(user) {
   );
 }
 
-function verifyAUser(token) {
+function verifyAToken(token) {
   try {
     const dec = verify(token, process.env.SECRET_KEY);
     return dec;
@@ -24,4 +24,4 @@ function verifyAUser(token) {
   }
 }
 
-module.exports = { createToken, verifyAUser };
+module.exports = { createToken, verifyAToken };
