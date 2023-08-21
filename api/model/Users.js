@@ -68,12 +68,15 @@ class Users {
   async login(req, res) {
     const { emailAdd, userPass } = req.body;
     const query = `
-            SELECT userID, firstName, lastName, userAge, gender, userRole, emailAdd, userProfile FROM Users WHERE emailAdd = ?
+            SELECT firstName, lastName,
+            userAge, gender, userRole, emailAdd,
+            userPass, userProfile FROM Users
+            WHERE emailAdd = ?
         `;
     db.query(query, [emailAdd], async (err, result) => {
       if (err) {
         res.json({
-          err,
+          status: res.statusCode,
           msg: "An error has occured",
         });
       }
