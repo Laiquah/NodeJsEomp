@@ -31,5 +31,5 @@ routes.get("^/$|/clayexpressions", (req, res) => {
 });
 
 app.listen(port, ()=>{
-    console.log(`port: ${port}`)
+    console.log(`Listening on port: ${port}`)
 });
