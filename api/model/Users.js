@@ -1,6 +1,6 @@
 const db = require("../config");
 const { hash, compare, hashSync } = require("bcrypt");
-
+const {createToken} = require('../middleware/AuthenticateUser')
 class Users {
   fetchUsers(req, res) {
     const query = `
@@ -51,7 +51,7 @@ class Users {
         `;
     db.query(query, [req.body], (err) => {
       if (!err) {
-        let token = createUser(user);
+        let token = createToken(user);
         res.json({
           status: res.statusCode,
           token,
