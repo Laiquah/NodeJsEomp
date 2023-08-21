@@ -30,6 +30,6 @@ routes.get("^/$|/clayexpressions", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./static/html/index.html"));
 });
 
-app.listen(port, ()=>{
-    console.log(`Listening on port: ${port}`)
+app.listen(port, () => {
+  console.log(`Listening on port: ${port}`);
 });
