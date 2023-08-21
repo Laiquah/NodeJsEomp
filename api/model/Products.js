@@ -1,0 +1,96 @@
+const db = require('../.config')
+
+class Products{
+    fetchProducts(req, res){
+        const query = `
+            SELECT prodID, prodName, prodDesc, quantity, price, category, prodUrl FROM Products;
+        `
+        db.query(query, (err, results)=>{
+            if (!err){
+                res.json({
+                    status: res.statusCode,
+                    results
+                })
+            } else{
+                res.json({
+                    status: res.statusCode,
+                    msg: "An error has occured"
+                })
+            }
+        })
+    }
+    fetchProduct(req, res){
+        const query = `
+        SELECT prodID, prodName, prodDesc, quantity, price, category, prodUrl FROM Products WHERE prodID = ${req.params.prodID}
+        `
+        db.query(query, [req.params.prodId], (err, result)=>{
+            if (!err){
+                res.json({
+                    status: res.statusCode,
+                    result
+                })
+            } else{
+                res.json({
+                    status: res.statusCode,
+                    msg:"An error has occured"
+                })
+            }
+        })
+    }
+    addProduct(req, res){
+        const query = `
+            INSERT INTO Products SET ?
+        `
+        db.query(query, [req.body], (err)=>{
+            if (!err){
+                res.json({
+                    status: res.statusCode,
+                    msg:"Product inserted successfully"
+                })
+            } else{
+                res.json({
+                    status: res.statusCode,
+                    msg:"An error has occured"
+                })
+            }
+        })
+    }
+    updateProduct(req, res){
+        const query = `
+            UDPATE Products SET ? WHERE prodID = ${req.params.prodID}
+        `
+        db.query(query, [req.body, req.params.prodId], (err)=>{
+            if (!err){
+                res.json({
+                    status: res.statusCode,
+                    msg:"Product updated successfully"
+                })
+            } else{
+                res.json({
+                    status: res.statusCode,
+                    msg:"An error has occured"
+                })
+            }
+        })
+    }
+    deleteProduct(req, res){
+        const query = `
+            DELETE FROM Products WHERE prodID = ${req.params.prodId}
+        `
+        db.query(query, [req.params.prodID], (err)=>{
+            if (!err){
+                res.json({
+                    status: res.statusCode,
+                    msg:"Product deleted successfully"
+                })
+            } else{
+                res.json({
+                    status: res.statusCode,
+                    msg: "An error occured"
+                })
+            }
+        })
+    }
+}
+
+module.exports = { Products }
