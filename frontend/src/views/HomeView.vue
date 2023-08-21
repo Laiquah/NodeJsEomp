@@ -5,23 +5,68 @@
         <h1>Welcome to ClayExpressions</h1>
       </div>
       <div class="text">
-        <h3> Where We Shape Dreams, Craft Memories</h3>
+        <h3>Where We Shape Dreams, Craft Memories</h3>
       </div>
       <div class="text">
         <button><router-link to="/about">more about us</router-link></button>
+      </div>
+    </div>
+    <div class="pro">
+      <h2 class="feature">Featured Products:</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <center>
+            <div class="card card-grid1">
+              <a href="/products" class="card1">
+                <div
+                  class="card__bg1"
+                  style="
+                    background-image: url(https://i.postimg.cc/J0XtrmbH/BOWL-Bleeksysie-4.jpg);
+                  "
+                ></div>
+                <div class="card__content1">
+                  <h3 class="card__heading1 text-white"></h3>
+                </div>
+              </a>
+              <a href="/products" class="card1">
+                <div
+                  class="card__bg1"
+                  style="
+                    background-image: url(https://i.postimg.cc/6q5dj8RL/IMG-577940-mm1-20-sec-at-f-56-ISO-200.jpg);
+                  "
+                ></div>
+                <div class="card__content1">
+                  <h3 class="card__heading1 text-white"></h3>
+                </div>
+              </a>
+              <a href="/products" class="card1">
+                <div
+                  class="card__bg1"
+                  style="
+                    background-image: url(https://i.postimg.cc/JndQBF1m/SPOON-Salt-1.jpg);
+                  "
+                ></div>
+                <div class="card__content1">
+                  <h3 class="card__heading1 text-white"></h3>
+                </div>
+              </a>
+            </div>
+            <br />
+          </center>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  
-}
+export default {};
 </script>
 
 <style scoped>
-.home{
+.home {
   background-image: url("https://i.postimg.cc/yxfkm5Vx/Potterswork-stock-2.jpg");
   background-attachment: fixed;
   height: 120vh;
@@ -29,7 +74,7 @@ export default {
   background-repeat: no-repeat;
 }
 
-button{
+button {
   background-color: white;
   color: black;
   width: 15rem;
@@ -37,9 +82,76 @@ button{
   border-radius: 2rem;
 }
 
-.text{
+.text {
   position: relative;
   top: 30%;
+  color: white;
+}
+
+.card1 {
+  list-style: none;
+  position: relative;
+  transition: all 0.5s ease-out;
+}
+
+.pro {
+  background-color: #f7f4f1;
+}
+
+.card-grid1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  width: 100%;
+}
+.card__bg1 {
+  position: relative;
+  height: 50vh;
+  min-width: 250px;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 1rem;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  transform: scale(1);
+  transition: all 0.5s ease-out;
+}
+
+.card__content1 {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+.card__category1 {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #acacac;
+}
+.card1:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0px 0px 100px #acacac);
+}
+.card-grid1:hover > .card1:not(:hover).card1 {
+  filter: brightness(0.8) grayscale(0.6) contrast(1.2) blur(10px);
+}
+
+.card {
+  width: 100%;
+  border: none;
+}
+
+.card {
+  background-color: transparent;
+}
+.img {
+  border-radius: 10px;
+  width: 50%;
+}
+
+h2 {
   color: black;
+  padding: 1rem;
 }
 </style>
