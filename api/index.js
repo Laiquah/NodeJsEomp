@@ -14,6 +14,8 @@ app.use(
   routes
 );
 
+app.use(errorHandling);
+
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Credentials", "true");
@@ -28,4 +30,6 @@ routes.get("^/$|/clayexpressions", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./static/html/index.html"));
 });
 
-app.listen(port);
+app.listen(port, ()=>{
+    console.log(`port: ${port}`)
+});
