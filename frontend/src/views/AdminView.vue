@@ -34,6 +34,7 @@
     </table>
     <div>
         <h1>products</h1>
+        
       <table class="table">
         <thead>
           <tr>
@@ -42,6 +43,7 @@
             <th>quantity</th>
             <th>price</th>
             <th>category</th>
+            <th>description</th>
             <th>product image</th>
             <th>Action</th>
           </tr>
@@ -53,6 +55,7 @@
             <td>{{ product.quantity }}</td>
             <td>R{{ product.price }}</td>
             <td>{{ product.category }}</td>
+            <td>{{ product.prodDesc }}</td>
             <td><img :src="product.prodUrl" :alt="product.prodName" class="img-fluid image" loading="lazy"></td>
             <td><button>edit</button><button>delete</button></td>
           </tr>
@@ -72,11 +75,11 @@ export default {
         Spinner
     },
     computed: {
-        products() {
-            return this.$store.state.products
-        },
         users() {
             return this.$store.state.users
+        },
+        products() {
+            return this.$store.state.products
         }
     },
     mounted() {
