@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import axios from 'axios'
 const miniURL = "https://nodjs-eomp.onrender.com/";
 
 export default createStore({
