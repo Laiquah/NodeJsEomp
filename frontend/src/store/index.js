@@ -1,5 +1,5 @@
-import { createStore } from 'vuex'
-import axios from 'axios'
+import { createStore } from "vuex";
+import axios from "axios";
 const miniURL = "https://nodjs-eomp.onrender.com/";
 
 export default createStore({
@@ -10,67 +10,66 @@ export default createStore({
     product: null,
     spinner: null,
     token: null,
-    msg: null
+    msg: null,
   },
-  getters: {
+  getters: {},
+  mutations: {
     setUsers(state, users) {
-      state.users = users
+      state.users = users;
     },
     setUser(state, user) {
-      state.user = user
+      state.user = user;
     },
     setProducts(state, products) {
-      state.products = products
+      state.products = products;
+      console.log(products)
     },
     setProduct(state, product) {
-      state.product = product
+      state.product = product;
     },
     setSpinner(state, spinner) {
-      state.spinner = value
+      state.spinner = value;
     },
     setToken(state, token) {
-      state.token = token
+      state.token = token;
     },
     setMsg(state, msg) {
-      state.msg = msg
-    }
-  },
-  mutations: {
+      state.msg = msg;
+    },
   },
   actions: {
-    async fetchUsers (context) {
+    async fetchUsers(context) {
       try {
-        const {data} = await axios.get(`${miniURL}users`)
-        context.commit("setUsers", data.results)
+        const { data } = await axios.get(`${miniURL}users`);
+        context.commit("setUsers", data.results);
       } catch (e) {
-        context.commit("setMsg", "an error occured")
+        context.commit("setMsg", "an error occured");
       }
     },
-    async fetchUser (context) {
+    async fetchUser(context) {
       try {
-        const {data} = await axios.get(`${miniURL}user`)
-        context.commit("setUser", data.results)
+        const { data } = await axios.get(`${miniURL}user`);
+        context.commit("setUser", data.results);
       } catch (e) {
-        context.commit("setMsg", "an error occured")
+        context.commit("setMsg", "an error occured");
       }
     },
-    async fetchProducts (context) {
+    async fetchProducts(context) {
       try {
-        const {data} = await axios.get(`${miniURL}products`)
-        context.commit("setProducts", data.results)
+        const { data } = await axios.get(`${miniURL}products`);
+        context.commit("setProducts", data.results);
       } catch (e) {
-        context.commit("setMsg", "an error occured")
+        context.commit("setMsg", "an error occured");
       }
     },
-    async fetchProduct (context) {
+    async fetchProduct(context) {
       try {
-        const {data} = await axios.get(`${miniURL}product`)
-        context.commit("setProduct", data.results)
+        const { data } = await axios.get(`${miniURL}product`);
+        context.commit("setProduct", data.results);
       } catch (e) {
-        context.commit("setMsg", "an error occured")
+        context.commit("setMsg", "an error occured");
       }
-    }
+    },
   },
-  modules: {
-  }
-})
+  modules: {},
+});
