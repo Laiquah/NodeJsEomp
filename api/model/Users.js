@@ -1,6 +1,6 @@
 const db = require("../config");
 const { hash, compare, hashSync } = require("bcrypt");
-const {createToken} = require('../middleware/AuthenticateUser')
+const { createToken } = require("../middleware/AuthenticateUser");
 class Users {
   fetchUsers(req, res) {
     const query = `
@@ -146,4 +146,4 @@ class Users {
   }
 }
 
-module.exports = { Users }
+module.exports = { Users };
