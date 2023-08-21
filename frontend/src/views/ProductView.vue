@@ -3,15 +3,16 @@
         <h1>products</h1>
         <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <button class="btn" type="submit">Search</button>
         </form>
         <div class="row" v-if="products">
             <div class="col-3" v-for="product in products" :key="product">
                 <div class="card" style="width: 18rem;">
-                    <img :src="product.prodUrl" class="card-img-top img-fluid" :alt="product.prodName">
+                    <img :src="product.prodUrl" class="card-img-top img-fluid" id="image" :alt="product.prodName">
                     <div class="card-body">
                       <h5 class="card-title">{{ product.prodName }}</h5>
                       <p class="card-text">category: {{ product.category }}</p>
+                      <p class="card-text">description: {{ product.prodDesc }}</p>
                       <p class="card-text">price: R{{ product.price }}</p>
                       quantity: <select>
                       <option>0</option>
@@ -54,5 +55,13 @@ import Spinner from '../components/SpinnerComp.vue'
 </script>
 
 <style scoped>
+#image{
+    aspect-ratio: 1/1;
+}
 
+.btn{
+    border: 2px solid #f7f4f1;
+    background-color: #f7f4f1;
+    box-shadow: 4px 4px black;
+  }
 </style>
