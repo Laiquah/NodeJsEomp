@@ -70,6 +70,54 @@ export default createStore({
         context.commit("setMsg", "an error occured");
       }
     },
+    async createUser(context) {
+      try{
+        const { data } = await axios.post(`${miniURL}user`)
+        context.commit("setUser", data.results);
+      } catch (e) {
+        context.commit("setMsg", "an error occured");
+      }
+    },
+    async updateUser(context) {
+      try{
+        const { data } = await axios.patch(`${miniURL}user`)
+        context.commit("setUser", data.results);
+      } catch (e) {
+        context.commit("setMsg", "an error occured");
+      }
+    },
+    async deleteUser(context) {
+      try{
+        const { data } = await axios.delete(`${miniURL}user`)
+        context.commit("setUser", data.results);
+      } catch (e) {
+        context.commit("setMsg", "an error occured");
+      }
+    },
+    async createProduct(context) {
+      try{
+        const { data } = await axios.post(`${miniURL}product`)
+        context.commit("setProduct", data.results);
+      } catch (e) {
+        context.commit("setMsg", "an error occured")
+      }
+    },
+    async updateProduct(context) {
+      try{
+        const { data } = await axios.patch(`${miniURL}product`)
+        context.commit("setProduct", data.results)
+      } catch (e) {
+        context.commit("setMsg", "an error occured")
+      }
+    },
+    async deleteProduct(context) {
+      try{
+        const { data } = await axios.delete(`${miniURL}product`)
+        context.commit("setProduct", data.results);
+      } catch (e) {
+        context.commit("setMsg", "an error occured")
+      }
+    }
   },
   modules: {},
 });

@@ -33,7 +33,30 @@
 
 <script>
     export default {
-        
+        data() {
+          return {
+            prodID: '',
+            prodName: '',
+            quantity: '',
+            price: '',
+            category: '',
+            prodDesc: '',
+            prodUrl: ''
+          }
+        },
+        computed: {
+          product() {
+            return this.$store.dispatch('updateProduct', {
+              id: this.prodID,
+              name: this.prodName,
+              quantity: this.quantity,
+              price: this.price,
+              category: this.category,
+              prodDesc: this.prodDesc,
+              image: this.prodUrl
+            })
+          }
+        }
     }
 </script>
 
