@@ -58,7 +58,9 @@
             <td>{{ product.category }}</td>
             <td>{{ product.prodDesc }}</td>
             <td><img :src="product.prodUrl" :alt="product.prodName" class="img-fluid image" loading="lazy"></td>
-            <td><updateProduct/><button @click="deleteProduct(product.prodID)" class="btn">delete</button></td>
+            <td>
+              <updateProduct :key="product.prodID"/>
+              <button @click="deleteProduct(product.prodID)" class="btn">delete</button></td>
           </tr>
           <tr v-else>
             <Spinner/>
@@ -100,7 +102,10 @@ export default {
       deleteProduct(prodID){
         if(confirm('Are you sure you want to delete this product?')){
         this.$store.dispatch("deleteProduct", prodID)
+        setTimeout(()=>{
+        console.log("Deleting now...")
         location.reload()
+      }, 500)
         }
       }
     }

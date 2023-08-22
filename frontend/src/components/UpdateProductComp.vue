@@ -33,34 +33,35 @@
           </div>
           <div class="modal-body">
             <input
+              :id="product.prodID"
               placeholder="name"
               type="text"
-              v-model="model.product.prodName"
+              v-model="product.prodName"
             />
             <input
               placeholder="quantity"
               type="number"
-              v-model="model.product.quantity"
+              v-model="product.quantity"
             />
             <input
               placeholder="description"
               type="text"
-              v-model="model.product.prodDesc"
+              v-model="product.prodDesc"
             />
             <input
               placeholder="price"
               type="number"
-              v-model="model.product.price"
+              v-model="product.price"
             />
             <input
               placeholder="category"
               type="text"
-              v-model="model.product.category"
+              v-model="product.category"
             />
             <input
               placeholder="image"
               type="text"
-              v-model="model.product.prodUrl"
+              v-model="product.prodUrl"
             />
           </div>
           <div class="modal-footer">
@@ -85,22 +86,23 @@
 export default {
   data() {
     return {
-      model: {
         product: {
-          prodName: "",
-          quantity: "",
+          prodName: null,
+          quantity: null,
           price: "",
           category: "",
           prodDesc: "",
           prodUrl: "",
         },
-      },
     };
   },
   methods: {
-    updateProduct() {
-      this.$store.dispatch("updateProduct", this.model.product);
-      location.reload();
+    updateProduct(prodID) {
+      this.$store.dispatch("updateProduct", this.product, prodID);
+      // setTimeout(() => {
+      //   console.log("Updating...");
+      //   location.reload();
+      // }, 1000);
     },
   },
 };
