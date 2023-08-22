@@ -26,6 +26,7 @@ export default createStore({
     },
     setProduct(state, product) {
       state.product = product;
+      console.log(product)
     },
     setSpinner(state, spinner) {
       state.spinner = value;
@@ -94,26 +95,52 @@ export default createStore({
         context.commit("setMsg", "an error occured");
       }
     },
-    async createProduct(context) {
+    async createProduct(context, payload) {
+      console.log("REACHED")
       try{
-        const { data } = await axios.post(`${miniURL}product`)
-        context.commit("setProduct", data.results);
+        const { res } = await axios.post(`${miniURL}product`, payload)
+        const {results, err} = await res.data
+        if(results){
+          context.commit('setProduct', results[0])
+          context.commit("setSpinner", false);
+        } else{
+          context.commit('setMsg', msg)
+        }
       } catch (e) {
         context.commit("setMsg", "an error occured")
       }
     },
-    async updateProduct(context) {
+    async updateProduct(context, payload, prodID) {
       try{
-        const { data } = await axios.patch(`${miniURL}product`)
-        context.commit("setProduct", data.results)
+        const { res } = await axios.patch(`${miniURL}product/${prodID}`, payload)
+        const {msg, err} = await res.data
+        if(err){
+          alert("An error has occured, please try again")
+        }
+        if(msg){
+          context.commit(setProduct, msg)
+          context.commit('setMsg', msg)
+        } else{
+          context.commit("setMsg", "An error occured")
+        }
       } catch (e) {
         context.commit("setMsg", "an error occured")
       }
     },
-    async deleteProduct(context) {
+    async deleteProduct(context, prodID) {
+      console.log("Reached")
       try{
-        const { data } = await axios.delete(`${miniURL}product`)
-        context.commit("setProduct", data.results);
+        const { res } = await axios.delete(`${miniURL}product/${prodID}`)
+        const {msg, err} = await res.data
+        if(err){
+          alert('An error has occured, please try again')
+        }
+        if(msg){
+          context.commit('setProduct', msg)
+          context.commit("setSpinner", false)
+        } else{
+          context.commit('setMsg', "An error occured")
+        }
       } catch (e) {
         context.commit("setMsg", "an error occured")
       }
