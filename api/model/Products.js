@@ -24,7 +24,7 @@ class Products {
     const query = `
         SELECT prodID, prodName, prodDesc, quantity, price, category, prodDesc, prodUrl FROM Products WHERE prodID = ${req.params.prodID}
         `;
-    db.query(query, [req.params.prodId], (err, result) => {
+    db.query(query, [req.params.prodID], (err, result) => {
       if (!err) {
         res.json({
           status: res.statusCode,
@@ -78,7 +78,7 @@ class Products {
   }
   deleteProduct(req, res) {
     const query = `
-            DELETE FROM Products WHERE prodID = ${req.params.prodId}
+            DELETE FROM Products WHERE prodID = ${req.params.prodID}
         `;
     db.query(query, [req.params.prodID], (err) => {
       if (!err) {
