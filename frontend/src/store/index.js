@@ -113,7 +113,7 @@ export default createStore({
     },
     async updateProduct(context, payload) {
       try{
-        const { res } = await axios.patch(`${miniURL}product/${payload.prodID}`, payload)
+        const { res } = await axios.put(`${miniURL}product/${payload.prodID}`, payload)
         const {msg, err} = await res.data
         console.log(msg)
         if(err){

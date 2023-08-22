@@ -64,5 +64,10 @@ import Spinner from '../components/SpinnerComp.vue'
     background-color: #f7f4f1;
     box-shadow: 4px 4px black;
   }
+
+  .card{
+    height: 40rem;
+    margin-bottom: 2rem;
+  }
   
 </style>

@@ -53,8 +53,12 @@
   },
   methods: {
     createUser(){
+      console.log("adding user")
       this.$store.dispatch("createUser", this.model.user)
-      location.reload()
+      setTimeout(()=>{
+        console.log("Reloading now...")
+        location.reload()
+      }, 500)
     }
   },
     }
@@ -66,5 +70,11 @@
   background-color: #f7f4f1;
   margin-bottom: 1rem;
   box-shadow: 4px 4px black;
+}
+
+input{
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 2rem;
 }
 </style>

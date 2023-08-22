@@ -87,8 +87,8 @@ export default {
   data() {
     return {
         product: {
-          prodName: null,
-          quantity: null,
+          prodName: "",
+          quantity: "",
           price: "",
           category: "",
           prodDesc: "",
