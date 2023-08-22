@@ -1,32 +1,31 @@
 <template>
     <div>
         <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
     add user
   </button>
   
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel1">New User</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <input type="text" placeholder="ID">
-          <input type="text" placeholder="first name">
-          <input type="text" placeholder="last name">
-          <input type="number" placeholder="age">
-          <input type="text" placeholder="gender">
-          <input type="text" placeholder="role">
-          <input type="text" placeholder="email address">
-          <input type="text" placeholder="password">
-          <input type="text" placeholder="profile image">
+          <input type="text" placeholder="first name" v-model="model.user.firstName">
+          <input type="text" placeholder="last name" v-model="model.user.lastName">
+          <input type="number" placeholder="age" v-model="model.user.userAge">
+          <input type="text" placeholder="gender" v-model="model.user.gender">
+          <input type="text" placeholder="role" v-model="model.user.userRole">
+          <input type="text" placeholder="email address" v-model="model.user.emailAdd">
+          <input type="text" placeholder="password" v-model="model.user.userPass">
+          <input type="text" placeholder="profile image" v-model="model.user.userProfile">
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn" @click="createUser">Save changes</button>
         </div>
       </div>
     </div>
@@ -36,10 +35,36 @@
 
 <script>
     export default {
-        
+      data() {
+    return {
+      model: {
+        user: {
+          firstName: "",
+          lastName: "",
+          userAge: "",
+          gender: "",
+          userRole: "",
+          emailAdd: "",
+          userPass: "",
+          userProfile: "",
+        },
+      },
+    };
+  },
+  methods: {
+    createUser(){
+      this.$store.dispatch("createUser", this.model.user)
+      location.reload()
+    }
+  },
     }
 </script>
 
 <style scoped>
-
+.btn{
+  border: 2px solid #f7f4f1;
+  background-color: #f7f4f1;
+  margin-bottom: 1rem;
+  box-shadow: 4px 4px black;
+}
 </style>

@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>Users</h1>
+    <addUser/>
     <table class="table">
       <thead>
         <tr>
@@ -25,7 +26,7 @@
            <td>{{ user.userRole }}</td>
            <td>{{ user.emailAdd }}</td>
            <td><img :src="user.userProfile" :alt="user.firstName" loading="lazy" class="img-fluid image"></td>
-           <td><button>edit</button><button>delete</button></td> 
+           <td><button class="btn">edit</button><button class="btn">delete</button></td> 
         </tr>
         <tr v-else>
             <Spinner/>
@@ -34,7 +35,7 @@
     </table>
     <div>
         <h1>products</h1>
-        
+        <addProduct/>
       <table class="table">
         <thead>
           <tr>
@@ -53,11 +54,11 @@
             <td>{{ product.prodID }}</td>
             <td>{{ product.prodName }}</td>
             <td>{{ product.quantity }}</td>
-            <td>R{{ product.price }}</td>
+            <td>{{ product.price }}</td>
             <td>{{ product.category }}</td>
             <td>{{ product.prodDesc }}</td>
             <td><img :src="product.prodUrl" :alt="product.prodName" class="img-fluid image" loading="lazy"></td>
-            <td><button>edit</button><button>delete</button></td>
+            <td><updateProduct/><button @click="deleteProduct(product.prodID)" class="btn">delete</button></td>
           </tr>
           <tr v-else>
             <Spinner/>
@@ -70,9 +71,15 @@
 
 <script>
 import Spinner from '../components/SpinnerComp.vue'
+import addProduct from '../components/AddProductComp.vue'
+import addUser from '../components/AddUserComp.vue'
+import updateProduct from '../components/UpdateProductComp.vue'
 export default {
     components: {
-        Spinner
+        Spinner,
+        addProduct,
+        addUser,
+        updateProduct
     },
     computed: {
         users() {
@@ -80,11 +87,22 @@ export default {
         },
         products() {
             return this.$store.state.products
+        },
+        product(){
+          return this.$store.state.product
         }
     },
     mounted() {
         this.$store.dispatch('fetchProducts')
         this.$store.dispatch('fetchUsers')
+    },
+    methods:{
+      deleteProduct(prodID){
+        if(confirm('Are you sure you want to delete this product?')){
+        this.$store.dispatch("deleteProduct", prodID)
+        location.reload()
+        }
+      }
     }
 };
 </script>
@@ -95,5 +113,12 @@ export default {
 }
 .table{
     background-color: #f7f4f1;
+}
+
+.btn{
+  border: 2px solid #f7f4f1;
+  background-color: #f7f4f1;
+  margin-bottom: 1rem;
+  box-shadow: 4px 4px black;
 }
 </style>

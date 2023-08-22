@@ -41,7 +41,7 @@
 import Spinner from '../components/SpinnerComp.vue'
     export default {
         components: {
-            Spinner
+            Spinner  
         },
         computed: {
             products() {
