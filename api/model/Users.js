@@ -24,7 +24,7 @@ class Users {
     const query = `
         SELECT userID, firstName, lastName, userAge, gender, userRole, emailAdd, userProfile FROM Users WHERE userID = ${req.params.id}
         `;
-    db.query(query, [req.params.id], (err, result) => {
+    db.query(query, (err, result) => {
       if (!err) {
         res.json({
           status: res.statusCode,
@@ -112,7 +112,7 @@ class Users {
     const query = `
             UPDATE Users SET ? WHERE userID = ${req.params.id}
         `;
-    db.query(query, [req.body, req.params.id], (err) => {
+    db.query(query, [req.body], (err) => {
       if (!err) {
         res.json({
           status: res.statusCode,
@@ -130,7 +130,7 @@ class Users {
     const query = `
             DELETE FROM Users WHERE userID = ${req.params.id}
         `;
-    db.query(query, [req.params.id], (err) => {
+    db.query(query, (err) => {
       if (!err) {
         res.json({
           status: res.statusCode,
