@@ -32,6 +32,11 @@ const routes = [
     name: 'ProductView',
     component: () => import('../views/SingleProductView.vue')
   },
+  {
+    path: '/customise',
+    name: 'customise',
+    component: () => import('../views/CustomiseView.vue')
+  }
 ]
 
 const router = createRouter({
