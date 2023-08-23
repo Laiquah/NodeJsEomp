@@ -107,9 +107,9 @@ export default {
 
     createUser() {
       this.$store.dispatch("createUser", this.model.user);
-      setTimeout(() => {
-        location.reload();
-      }, 500);
+      // setTimeout(() => {
+      //   location.reload();
+      // }, 500);
     },
   },
 };
