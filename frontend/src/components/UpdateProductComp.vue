@@ -5,7 +5,7 @@
       type="button"
       class="btn"
       @click="openEditModal(product.prodID)"
-      :data-bs-toggle="'modal'"
+      data-bs-toggle="modal"
       :data-bs-target="'#exampleModal' + product.prodID"
     >
       edit
@@ -72,7 +72,11 @@
             >
               Close
             </button>
-            <button type="button" class="btn" @click="updateProduct(product.prodID)">
+            <button
+              type="button"
+              class="btn"
+              @click="updateProduct(product.prodID)"
+            >
               Save changes
             </button>
           </div>
@@ -83,16 +87,15 @@
 </template>
 
 <script>
-
 export default {
-  props:['product'],
+  props: ["product"],
   data() {
     return {
-      editingProduct:{
-         ...this.product
-        },
-        editingProductID: null,
-      model:{
+      editingProduct: {
+        ...this.product,
+      },
+      editingProductID: null,
+      model: {
         product: {
           prodName: "",
           quantity: 0,
@@ -103,31 +106,38 @@ export default {
           prodDesc: "",
           prodUrl: "",
         },
-      }
+      },
     };
   },
-  computed:{
-    currentProduct(){
-          return this.$store.state.product
-        }
+  computed: {
+    currentProduct() {
+      return this.$store.state.product;
+    },
   },
   methods: {
-    openEditModal(prodID){
-      this.editingProductID = prodID
-      this.editingProduct = {...this.$store.state.products.find(product => product.prodID === prodID)}
+    openEditModal(prodID) {
+      this.editingProductID = prodID;
+      this.editingProduct = {
+        ...this.$store.state.products.find(
+          (product) => product.prodID === prodID
+        ),
+      };
     },
     updateProduct(prodID) {
-      this.$store.dispatch("updateProduct", {
-        prodID: prodID,
-        ...this.editingProduct
-      }).then(()=>{
-        console.log("Product updated!")
-        // setTimeout(()=>{
-        //   location.reload()
-        // }, 500)
-      }).catch(err =>{
-        console.error("Error updating: ", err)
-      })
+      this.$store
+        .dispatch("updateProduct", {
+          prodID: prodID,
+          ...this.editingProduct,
+        })
+        .then(() => {
+          console.log("Product updated!");
+          setTimeout(()=>{
+            location.reload()
+          }, 500)
+        })
+        .catch((err) => {
+          console.error("Error updating: ", err);
+        });
     },
   },
 };

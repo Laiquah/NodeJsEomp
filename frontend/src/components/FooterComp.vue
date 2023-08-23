@@ -1,108 +1,136 @@
 <template>
-    <div>
-        <footer class="footer-section">
-            <div class="container">
-                <div class="footer-cta pt-5 pb-5">
-                    <div class="row">
-                        <div class="col-xl-4 col-md-4 mb-30">
-                            <div class="single-cta">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div class="cta-text">
-                                    <h4>Find us</h4>
-                                    <span>Unit 1 - 3
-                                        Toledo Close, Capricorn Drive ,
-                                        Capricorn Park
-                                        Muizenburg</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-4 mb-30">
-                            <div class="single-cta">
-                                <i class="fas fa-phone"></i>
-                                <div class="cta-text">
-                                    <h4>Call us</h4>
-                                    <span><a href="tel:0658190250">065 819 0250</a></span>
-                                    <br>
-                                    <span><a href="tel:0679906093">067 990 6093</a></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-4 mb-30">
-                            <div class="single-cta">
-                                <i class="far fa-envelope-open"></i>
-                                <div class="cta-text">
-                                    <h4>Mail us</h4>
-                                    <span><a href="mailto:cotielaiquah@gmail.com" target="_blank">cotielaiquah@gmail.com</a></span>
-                                    <br>
-                                    <span><a href="mailto:eightonleepaulse@gmail.com" target="_blank">eightonleepaulse@gmail.com</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  <div>
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+          <div class="row">
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="cta-text">
+                  <h4>Find us</h4>
+                  <span
+                    >Unit 1 - 3 Toledo Close, Capricorn Drive , Capricorn Park
+                    Muizenburg</span
+                  >
                 </div>
-                <div class="footer-content pt-5 pb-5">
-                    <div class="row">
-                        <div class="col-xl-4 col-lg-4 mb-50">
-                            <div class="footer-widget">
-                                <div class="footer-logo">
-                                    <router-link to="/"><img src="https://i.postimg.cc/2y6Cc6N1/Screenshot-2023-08-13-184438-removebg-preview.png" class="img-fluid" alt="logo"></router-link>
-                                </div>
-                                <div class="footer-text">
-                                    <p>"Shaping Dreams, Crafting Memories: ClayExpressions"</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                            <div class="footer-widget">
-                                <div class="footer-widget-heading">
-                                    <h3>Useful Links</h3>
-                                </div>
-                                <ul>
-                                    <li><a href="../views/HomeView.vue">Home</a></li>
-                                    <li><a href="../views/AboutView.vue">about</a></li>
-                                    <li><a href="#team">Team</a></li>
-                                    <li><a href="#services">services</a></li>
-                                    <li><a href="#partnerships">partnerships</a></li>
-                                    <li><a href="../views/ContactView.vue">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-                            <div class="footer-social-icon">
-                                <span>Follow us</span>
-                                <a href="https://www.facebook.com/pottersworkCT/" target="_blank"><img src="https://i.postimg.cc/QMwWNNN2/icons8-facebook-150.png" loading="lazy" alt="facebook"></a>
-                                <a href="https://www.instagram.com/potterswork/" target="_blank"><img src="https://i.postimg.cc/gcRBWnkP/icons8-instagram-150.png" loading="lazy" alt="instagram"></a>
-                                <a href="https://twitter.com/LaiquahC" target="_blank"><img src="https://i.postimg.cc/63bF9JwS/icons8-twitter-150.png" loading="lazy" alt="twitter"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="copyright-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center">
-                            <div class="copyright-text">
-                                <p>Copyright &copy; 2023, All Right Reserved</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="fas fa-phone"></i>
+                <div class="cta-text">
+                  <h4>Call us</h4>
+                  <span><a href="tel:0658190250">065 819 0250</a></span>
+                  <br />
+                  <span><a href="tel:0679906093">067 990 6093</a></span>
                 </div>
+              </div>
             </div>
-        </footer>
-    </div>
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="far fa-envelope-open"></i>
+                <div class="cta-text">
+                  <h4>Mail us</h4>
+                  <span
+                    ><a href="mailto:cotielaiquah@gmail.com" target="_blank"
+                      >cotielaiquah@gmail.com</a
+                    ></span
+                  >
+                  <br />
+                  <span
+                    ><a href="mailto:eightonleepaulse@gmail.com" target="_blank"
+                      >eightonleepaulse@gmail.com</a
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 mb-50">
+              <div class="footer-widget">
+                <div class="footer-logo">
+                  <router-link to="/"
+                    ><img
+                      src="https://i.postimg.cc/2y6Cc6N1/Screenshot-2023-08-13-184438-removebg-preview.png"
+                      class="img-fluid"
+                      alt="logo"
+                  /></router-link>
+                </div>
+                <div class="footer-text">
+                  <p>"Shaping Dreams, Crafting Memories: ClayExpressions"</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+              <div class="footer-widget">
+                <div class="footer-widget-heading">
+                  <h3>Useful Links</h3>
+                </div>
+                <ul>
+                  <li><a href="../views/HomeView.vue">Home</a></li>
+                  <li><a href="../views/AboutView.vue">about</a></li>
+                  <li><a href="#team">Team</a></li>
+                  <li><a href="#services">services</a></li>
+                  <li><a href="#partnerships">partnerships</a></li>
+                  <li><a href="../views/ContactView.vue">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+              <div class="footer-social-icon">
+                <span>Follow us</span>
+                <a
+                  href="https://www.facebook.com/pottersworkCT/"
+                  target="_blank"
+                  ><img
+                    src="https://i.postimg.cc/QMwWNNN2/icons8-facebook-150.png"
+                    loading="lazy"
+                    alt="facebook"
+                /></a>
+                <a href="https://www.instagram.com/potterswork/" target="_blank"
+                  ><img
+                    src="https://i.postimg.cc/gcRBWnkP/icons8-instagram-150.png"
+                    loading="lazy"
+                    alt="instagram"
+                /></a>
+                <a href="https://twitter.com/LaiquahC" target="_blank"
+                  ><img
+                    src="https://i.postimg.cc/63bF9JwS/icons8-twitter-150.png"
+                    loading="lazy"
+                    alt="twitter"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-area">
+        <div class="container">
+          <div class="row">
+            <div class="text-center">
+              <div class="copyright-text">
+                <p>Copyright &copy; 2023, All Right Reserved</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {};
 </script>
 
 <style scoped>
 ul {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 .footer-section {
   position: relative;
@@ -146,12 +174,12 @@ ul {
   margin-bottom: 30px;
 }
 .footer-logo img {
-    max-width: 200px;
+  max-width: 200px;
 }
 .footer-text p {
   margin-bottom: 14px;
   font-size: 14px;
-      color: black;
+  color: black;
   line-height: 28px;
 }
 .footer-social-icon span {
@@ -159,7 +187,7 @@ ul {
   display: block;
   font-size: 20px;
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
 }
 .footer-social-icon a {
@@ -177,14 +205,14 @@ ul {
   line-height: 38px;
   border-radius: 50%;
 }
-.facebook-bg{
-  background: #3B5998;
+.facebook-bg {
+  background: #3b5998;
 }
-.twitter-bg{
-  background: #55ACEE;
+.twitter-bg {
+  background: #55acee;
 }
-.google-bg{
-  background: #DD4B39;
+.google-bg {
+  background: #dd4b39;
 }
 .footer-widget-heading h3 {
   color: black;
@@ -207,7 +235,7 @@ ul {
   width: 50%;
   margin-bottom: 12px;
 }
-.footer-widget ul li a:hover{
+.footer-widget ul li a:hover {
   color: #ff5e14;
 }
 .footer-widget ul li a {
@@ -221,19 +249,19 @@ ul {
 .subscribe-form input {
   width: 100%;
   padding: 14px 28px;
-  background: #2E2E2E;
-  border: 1px solid #2E2E2E;
+  background: #2e2e2e;
+  border: 1px solid #2e2e2e;
   color: #fff;
 }
 .subscribe-form button {
-    position: absolute;
-    right: 0;
-    background: #ff5e14;
-    padding: 13px 20px;
-    border: 1px solid #ff5e14;
-    top: 0;
+  position: absolute;
+  right: 0;
+  background: #ff5e14;
+  padding: 13px 20px;
+  border: 1px solid #ff5e14;
+  top: 0;
 }
-.copyright-area{
+.copyright-area {
   padding: 25px 0;
 }
 .copyright-text p {
@@ -241,14 +269,14 @@ ul {
   font-size: 14px;
   color: black;
 }
-.copyright-text p a{
+.copyright-text p a {
   color: #ff5e14;
 }
 .footer-menu li {
   display: inline-block;
   margin-left: 20px;
 }
-.footer-menu li:hover a{
+.footer-menu li:hover a {
   color: #ff5e14;
 }
 .footer-menu li a {
