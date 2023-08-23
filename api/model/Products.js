@@ -14,7 +14,7 @@ class Products {
       } else {
         res.json({
           status: res.statusCode,
-          msg: "An error has occured",
+          msg: "An error has occured: 😓",
           err
         });
       }
@@ -33,7 +33,7 @@ class Products {
       } else {
         res.json({
           status: res.statusCode,
-          msg: "An error has occured",
+          msg: "An error has occured 😓",
         });
       }
     });
@@ -46,12 +46,12 @@ class Products {
       if (!err) {
         res.json({
           status: res.statusCode,
-          msg: "Product inserted successfully",
+          msg: "Product inserted successfully 😇",
         });
       } else {
         res.json({
           status: res.statusCode,
-          msg: "An error has occured",
+          msg: "An error has occured 😓",
           err,
         });
       }
@@ -65,12 +65,12 @@ class Products {
       if (!err) {
         res.json({
           status: res.statusCode,
-          msg: "Product updated successfully",
+          msg: "Product updated successfully 😇",
         });
       } else {
         res.json({
           status: res.statusCode,
-          msg: "An error has occured",
+          msg: "An error has occured 😓",
           err,
         });
       }
@@ -84,12 +84,12 @@ class Products {
       if (!err) {
         res.json({
           status: res.statusCode,
-          msg: "Product deleted successfully",
+          msg: "Product deleted successfully 😇",
         });
       } else {
         res.json({
           status: res.statusCode,
-          msg: "An error occured",
+          msg: "An error occured 😓",
         });
       }
     });
