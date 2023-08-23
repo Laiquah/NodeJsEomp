@@ -6,8 +6,8 @@
             <button class="btn" type="submit">Search</button>
         </form>
         <div class="row" v-if="products">
-            <div class="col-3" v-for="product in products" :key="product">
-                <div class="card" style="width: 18rem;">
+            <div class="col-3"  v-for="product in products" :key="product">
+                <div class="card" id="test" style="width: 100%; height: 100%;">
                     <img :src="product.prodUrl" class="card-img-top img-fluid" id="image" :alt="product.prodName">
                     <div class="card-body">
                       <h5 class="card-title">{{ product.prodName }}</h5>
@@ -58,6 +58,8 @@ import Spinner from '../components/SpinnerComp.vue'
 #image{
     aspect-ratio: 1/1;
 }
+
+
 
 .btn{
     border: 2px solid #f7f4f1;
