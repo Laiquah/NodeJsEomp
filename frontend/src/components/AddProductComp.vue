@@ -118,4 +118,10 @@ export default {
   margin-bottom: 1rem;
   box-shadow: 4px 4px black;
 }
+
+input{
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 2rem;
+}
 </style>

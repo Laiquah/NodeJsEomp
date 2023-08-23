@@ -124,7 +124,7 @@
             <div class="card-container">
                 <div class="card">
                 <div class="img-content">
-                  <img src="https://i.postimg.cc/yNTpQ7tL/diana-light-u-jt9-A7-FADk-unsplash.jpg" alt="Hand-Building" loading="lazy" class="img-fluid">
+                  <img src="https://i.postimg.cc/Y0yzswQt/diane-helentjaris-Ct-Cd-F7-Zi-Ves-unsplash.jpg" alt="Hand-Building" loading="lazy" class="img-fluid">
                 </div>
                 <div class="content">
                   <p class="heading">Hand-Building</p>
@@ -412,24 +412,24 @@ h3 {
   }
   
   .carousel-item {
-    width: 16rem;
-    height: 20rem;
+    width: 20rem;
+    height: 30rem;
   }
 
   .d-block {
-    width: 16rem;
-    height: 20rem;
+    width: 20rem;
+    height: 30rem;
   }
 
   .carousel-slide {
     text-align: center;
-    width: 16rem;
-    height: 20rem;
+    width: 20rem;
+    height: 30rem;
   }
 
 .carousel-inner {
-  width: 16rem;
-  height: 20rem;
+  width: 20rem;
+  height: 30rem;
 }
 
   #team {

@@ -97,6 +97,8 @@ export default {
           prodName: "",
           quantity: 0,
           price: 0,
+          quantity: "",
+          price: "",
           category: "",
           prodDesc: "",
           prodUrl: "",

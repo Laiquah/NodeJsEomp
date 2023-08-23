@@ -5,12 +5,16 @@
             <div class="card-header">
               <div class="log">Contact</div>
             </div>
-            <form action="https://formspree.io/f/xknlrgwn" method="POST" class="form">
+            <form action="https://formspree.io/f/xqkvqbbe" method="POST" class="form">
                 <div class="form-group">
-                  <input required name="name" id="username" type="text" placeholder="first name">
-                  <input required name="name" id="username" type="text" placeholder="last name">
-                  <input required name="email" id="username" type="text" placeholder="email address">
-                  <input required name="number" id="username" type="text" placeholder="contact number">
+                  <input required name="name" oninvalid="this.setCustomValidity('provide your name')"
+                  oninput="this.setCustomValidity('')" id="username" type="text" placeholder="first name">
+                  <input required name="name" oninvalid="this.setCustomValidity('provide your surname')"
+                  oninput="this.setCustomValidity('')" id="username" type="text" placeholder="last name">
+                  <input required name="email" oninvalid="this.setCustomValidity('provide your email')"
+                  oninput="this.setCustomValidity('')" id="username" type="text" placeholder="email address">
+                  <input required name="number" oninvalid="this.setCustomValidity('provide your number')"
+                  oninput="this.setCustomValidity('')" id="username" type="text" placeholder="contact number">
                 </div>
                 <div class="form-group" id="form">
                   <input value="submit" type="submit">

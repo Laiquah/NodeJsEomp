@@ -128,6 +128,12 @@ export default createStore({
         if (err) {
           console.log("An error has occured: ", err);
           context.commit("setMsg", err);
+      try{
+        const { res } = await axios.put(`${miniURL}product/${payload.prodID}`, payload)
+        const {msg, err} = await res.data
+        console.log(msg)
+        if(err){
+          alert("An error has occured, please try again")
         }
         if (msg) {
           console.log("Updating");
