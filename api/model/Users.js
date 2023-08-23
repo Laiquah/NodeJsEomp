@@ -15,7 +15,7 @@ class Users {
       } else {
         res.json({
           err,
-          msg: "Error has occured",
+          msg: "Error has occured 😓",
         });
       }
     });
@@ -33,7 +33,7 @@ class Users {
       } else {
         res.json({
           err,
-          msg: "Error has occured",
+          msg: "Error has occured 😓",
         });
       }
     });
@@ -55,12 +55,12 @@ class Users {
         res.json({
           status: res.statusCode,
           token,
-          msg: "User registered successfully",
+          msg: "User registered successfully 😇",
         });
       } else {
         res.json({
           err,
-          msg: "An error occured",
+          msg: "An error occured 😓",
         });
       }
     });
@@ -77,13 +77,13 @@ class Users {
       if (err) {
         res.json({
           status: res.statusCode,
-          msg: "An error has occured",
+          msg: "An error has occured 😓",
         });
       }
       if (!result?.length) {
         res.json({
           status: res.statusCode,
-          msg: "You are providing the wrong email or password",
+          msg: "You are providing the wrong email or password 😑",
         });
       } else {
         await compare(userPass, result[0].userPass, (cErr, cResult) => {
@@ -94,14 +94,14 @@ class Users {
           });
           if (cResult) {
             res.json({
-              msg: "Logged in successfully",
+              msg: "Logged in successfully 😇",
               token,
               cResult: cResult[0],
             });
           } else {
             res.json({
               status: res.statusCode,
-              msg: "Invalid Login details",
+              msg: "Invalid Login details 😑",
             });
           }
         });
@@ -116,12 +116,12 @@ class Users {
       if (!err) {
         res.json({
           status: res.statusCode,
-          msg: "User profile updated successfully",
+          msg: "User profile updated successfully 😇",
         });
       } else {
         res.json({
           err,
-          msg: "Error occured",
+          msg: "An error occured 😓",
         });
       }
     });
@@ -134,12 +134,13 @@ class Users {
       if (!err) {
         res.json({
           status: res.statusCode,
-          msg: "User record deleted successfully",
+          msg: "User record deleted successfully 😇",
         });
       } else {
         res.json({
+          status: res.statusCode,
           err,
-          msg: "An error occured",
+          msg: "An error occured 😓",
         });
       }
     });
