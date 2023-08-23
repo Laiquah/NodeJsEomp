@@ -118,42 +118,30 @@ export default createStore({
       }
     },
     async updateProduct(context, payload) {
+      console.log(payload)
       try {
-        const res = await axios.patch(
-          `${miniURL}product/${payload.prodID}`,
-          payload
-        );
+        const res = await axios.patch(`${miniURL}product/${payload.prodID}`, payload);
         const { msg, err } = await res.data;
         console.log(msg, err);
         if (err) {
           console.log("An error has occured: ", err);
           context.commit("setMsg", err);
-      try{
-        const { res } = await axios.put(`${miniURL}product/${payload.prodID}`, payload)
-        const {msg, err} = await res.data
-        console.log(msg)
-        if(err){
-          alert("An error has occured, please try again")
         }
         if (msg) {
-          console.log("Updating");
           context.commit("setProduct", msg);
-          context.commit("setMsg", "Product updated successfully");
-        } else {
-          console.error("An error has occured while updating the product");
-          context.commit("setMsg", "An error occured");
+          context.commit("setMsg", "Successfully updated product.");
         }
       } catch (e) {
-        context.commit("setMsg", "an error occured");
+        context.commit("setMsg", e);
       }
     },
     async deleteProduct(context, prodID) {
-      console.log("Reached");
+      console.log("reached");
       try {
         const { res } = await axios.delete(`${miniURL}product/${prodID}`);
         const { msg, err } = await res.data;
         if (err) {
-          alert("An error has occured, please try again");
+          alert("an error has occured, please try again");
         }
         if (msg) {
           context.commit("setProduct", msg);

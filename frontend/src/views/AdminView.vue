@@ -16,7 +16,7 @@
           <th>Action</th>
         </tr>
       </thead>
-      <tbody v-for="user in users" :key="user">
+      <tbody v-for="user in users" :key="user.userID">
         <tr v-if="users">
            <td>{{ user.userID }}</td>
            <td>{{ user.firstName }}</td>
@@ -102,10 +102,10 @@ export default {
       deleteProduct(prodID){
         if(confirm('Are you sure you want to delete this product?')){
         this.$store.dispatch("deleteProduct", prodID)
-        setTimeout(()=>{
-        console.log("Deleting now...")
-        location.reload()
-      }, 500)
+      //   setTimeout(()=>{
+      //   console.log("Deleting now...")
+      //   location.reload()
+      // }, 500)
         }
       }
     }

@@ -5,7 +5,7 @@
       type="button"
       class="btn"
       data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
+      data-bs-target="#exampleModal1"
     >
       add product
     </button>
@@ -13,9 +13,9 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="exampleModal"
+      id="exampleModal1"
       tabindex="-1"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="exampleModal1Label"
       aria-hidden="true"
     >
       <div class="modal-dialog">
@@ -102,10 +102,10 @@ export default {
   methods: {
     createProduct(){
       this.$store.dispatch("createProduct", this.model.product)
-      setTimeout(()=>{
-        console.log("Reloading now...")
-        location.reload()
-      }, 500)
+      // setTimeout(()=>{
+      //   console.log("Reloading now...")
+      //   location.reload()
+      // }, 500)
     }
   },
   }
