@@ -17,43 +17,43 @@
         <div class="row">
           <div class="col-3">
             <center>
-            <div class="card card-grid1">
-              <a href="/products" class="card1">
-                <div
-                  class="card__bg1"
-                  style="
-                    background-image: url(https://i.postimg.cc/J0XtrmbH/BOWL-Bleeksysie-4.jpg);
-                  "
-                ></div>
-                <div class="card__content1">
-                  <h3 class="card__heading1 text-white"></h3>
-                </div>
-              </a>
-              <a href="/products" class="card1">
-                <div
-                  class="card__bg1"
-                  style="
-                    background-image: url(https://i.postimg.cc/6q5dj8RL/IMG-577940-mm1-20-sec-at-f-56-ISO-200.jpg);
-                  "
-                ></div>
-                <div class="card__content1">
-                  <h3 class="card__heading1 text-white"></h3>
-                </div>
-              </a>
-              <a href="/products" class="card1">
-                <div
-                  class="card__bg1"
-                  style="
-                    background-image: url(https://i.postimg.cc/JndQBF1m/SPOON-Salt-1.jpg);
-                  "
-                ></div>
-                <div class="card__content1">
-                  <h3 class="card__heading1 text-white"></h3>
-                </div>
-              </a>
-            </div>
-            <br />
-          </center>
+              <div class="card card-grid1">
+                <a href="/products" class="card1">
+                  <div
+                    class="card__bg1"
+                    style="
+                      background-image: url(https://i.postimg.cc/J0XtrmbH/BOWL-Bleeksysie-4.jpg);
+                    "
+                  ></div>
+                  <div class="card__content1">
+                    <h3 class="card__heading1 text-white"></h3>
+                  </div>
+                </a>
+                <a href="/products" class="card1">
+                  <div
+                    class="card__bg1"
+                    style="
+                      background-image: url(https://i.postimg.cc/6q5dj8RL/IMG-577940-mm1-20-sec-at-f-56-ISO-200.jpg);
+                    "
+                  ></div>
+                  <div class="card__content1">
+                    <h3 class="card__heading1 text-white"></h3>
+                  </div>
+                </a>
+                <a href="/products" class="card1">
+                  <div
+                    class="card__bg1"
+                    style="
+                      background-image: url(https://i.postimg.cc/JndQBF1m/SPOON-Salt-1.jpg);
+                    "
+                  ></div>
+                  <div class="card__content1">
+                    <h3 class="card__heading1 text-white"></h3>
+                  </div>
+                </a>
+              </div>
+              <br />
+            </center>
           </div>
         </div>
       </div>

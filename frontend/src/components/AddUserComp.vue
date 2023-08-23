@@ -5,7 +5,7 @@
       type="button"
       class="btn"
       data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
+      data-bs-target="#exampleModal3"
     >
       add user
     </button>
@@ -13,9 +13,9 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="exampleModal"
+      id="exampleModal3"
       tabindex="-1"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="exampleModal3Label"
       aria-hidden="true"
     >
       <div class="modal-dialog">
@@ -89,6 +89,7 @@
 export default {
   data() {
     return {
+      addingUserID: null,
       model: {
         user: {
           firstName: "",
@@ -104,12 +105,12 @@ export default {
     };
   },
   methods: {
-
     createUser() {
-      this.$store.dispatch("createUser", this.model.user);
-      // setTimeout(() => {
-      //   location.reload();
-      // }, 500);
+      this.$store.dispatch("register", this.model.user);
+      console.log(this.model.user);
+      setTimeout(() => {
+        location.reload();
+      }, 500);
     },
   },
 };
@@ -123,10 +124,9 @@ export default {
   box-shadow: 4px 4px black;
 }
 
-input{
+input {
   width: 100%;
   height: 3rem;
   margin-bottom: 2rem;
 }
 </style>
-

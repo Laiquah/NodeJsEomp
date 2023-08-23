@@ -6,6 +6,7 @@ export default createStore({
   state: {
     users: null,
     user: null,
+    selectedProduct: null,
     products: null,
     product: null,
     spinner: null,
@@ -27,6 +28,9 @@ export default createStore({
     setProduct(state, product) {
       state.product = product;
       console.log(product);
+    },
+    setSelectedProduct(state, product){
+      state.selectedProduct = product
     },
     setSpinner(state, spinner) {
       state.spinner = value;
@@ -71,9 +75,9 @@ export default createStore({
         context.commit("setMsg", "an error occured");
       }
     },
-    async createUser(context, payload) {
+    async register(context, payload) {
       try {
-        const res = await axios.post(`${miniURL}user`, payload);
+        const res = await axios.post(`${miniURL}register`, payload);
         const { msg, err } = await res.data;
         if (err) {
           context.commit("setMsg", "Something went wrong");
@@ -85,18 +89,33 @@ export default createStore({
         context.commit("setMsg", "an error occured");
       }
     },
-    async updateUser(context) {
+    async updateUser(context, payload) {
+      console.log(payload)
       try {
-        const { data } = await axios.patch(`${miniURL}user`);
-        context.commit("setUser", data.results);
+        const res = await axios.patch(`${miniURL}user/${payload.userID}`, payload.data);
+        const { msg, err } = res.data
+        if(msg){
+          context.commit("setUser", msg)
+        } else{
+          context.commit("setMsg", e)
+        }
       } catch (e) {
         context.commit("setMsg", "an error occured");
       }
     },
-    async deleteUser(context) {
+    async deleteUser(context, id) {
       try {
-        const { data } = await axios.delete(`${miniURL}user`);
-        context.commit("setUser", data.results);
+        const { res } = await axios.delete(`${miniURL}user/${id}`);
+        const {msg, err} = res.data
+        if(err){
+          console.error("An error has occured: ", err)
+          context.commit("setMsg", "An error has occured")
+        }
+        if(msg){
+          context.dispatch("fetchProducts")
+          context.commit('setUser', msg)
+          console.log("User deleted successfully")
+        }
       } catch (e) {
         context.commit("setMsg", "an error occured");
       }

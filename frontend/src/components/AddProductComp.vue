@@ -62,18 +62,10 @@
             />
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn"
-              data-bs-dismiss="modal"
-            >
+            <button type="button" class="btn" data-bs-dismiss="modal">
               Close
             </button>
-            <button
-              type="button"
-              class="btn"
-              @click="createProduct"
-            >
+            <button type="button" class="btn" @click="createProduct">
               Save changes
             </button>
           </div>
@@ -100,26 +92,26 @@ export default {
     };
   },
   methods: {
-    createProduct(){
-      this.$store.dispatch("createProduct", this.model.product)
-      // setTimeout(()=>{
-      //   console.log("Reloading now...")
-      //   location.reload()
-      // }, 500)
-    }
+    createProduct() {
+      this.$store.dispatch("createProduct", this.model.product);
+      setTimeout(()=>{
+        console.log("Reloading now...")
+        location.reload()
+      }, 500)
+    },
   },
-  }
+};
 </script>
 
 <style scoped>
-.btn{
+.btn {
   border: 2px solid #f7f4f1;
   background-color: #f7f4f1;
   margin-bottom: 1rem;
   box-shadow: 4px 4px black;
 }
 
-input{
+input {
   width: 100%;
   height: 3rem;
   margin-bottom: 2rem;

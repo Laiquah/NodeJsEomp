@@ -2,8 +2,22 @@
   <div>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <router-link to="/"><img src="https://i.postimg.cc/2y6Cc6N1/Screenshot-2023-08-13-184438-removebg-preview.png" alt="logo" loading="lazy" class="img-fluid"></router-link>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <router-link to="/"
+          ><img
+            src="https://i.postimg.cc/2y6Cc6N1/Screenshot-2023-08-13-184438-removebg-preview.png"
+            alt="logo"
+            loading="lazy"
+            class="img-fluid"
+        /></router-link>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -31,25 +45,23 @@
 </template>
 
 <script>
-export default {
-  
-}
+export default {};
 </script>
 
 <style scoped>
-img{
+img {
   width: 5rem;
 }
 
-.navbar{
+.navbar {
   padding: 0;
 }
 
-.nav-item{
+.nav-item {
   color: black !important;
 }
 
-li{
+li {
   margin: 1rem;
 }
 </style>
