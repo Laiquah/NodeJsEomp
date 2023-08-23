@@ -144,289 +144,33 @@
       </div>
     </section>
     <h3>partnerships</h3>
-    <section id="partnerships"></section>
-    <h3>ClayCraft Haven</h3>
-    <section id="studio">
-      <div>
-        Where clay and imagination unite, crafting timeless artistry that
-        enriches your space. Our studio blends ancient pottery techniques with
-        modern innovation, welcoming artisans and beginners alike to a community
-        fueled by clay's passion. We shape elegant pottery, from nature-inspired
-        vases to functional tableware, embodying both form and function. Our art
-        shop, guided by skilled mentors, offers materials and inspiration, while
-        workshops refine skills. Step into our studio, where clay comes alive
-        through expert guidance, transforming raw material into personalized
-        art. Discover a sanctuary for those who express through clay, uniting
-        individuality and artistry.
-      </div>
-      <p>At ClayCraft Haven you have the opportunity to:</p>
-      <div class="row">
+    <section id="partnerships">
+      <div class="row justify-content-center">
         <div class="col-3">
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content">
-                <img
-                  src="https://i.postimg.cc/7Ymv6MmB/quino-al-v-Bxl-L1xp-Sdc-unsplash.jpg"
-                  alt="Wheel throwing"
-                  loading="lazy"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="content">
-                <p class="heading">Wheel Throwing</p>
-                <p class="heading">
-                  Learn the art of shaping clay on a pottery wheel to create
-                  vessels like bowls, cups, and vases. It's a classic and
-                  mesmerizing pottery technique.
-                </p>
-              </div>
-            </div>
+          <div class="card">
+            <img src="https://i.postimg.cc/rm700h25/Screenshot-2023-08-19-094202.png" alt="dhl" loading="lazy" class="img-fluid">
           </div>
         </div>
         <div class="col-3">
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content">
-                <img
-                  src="https://i.postimg.cc/Y0yzswQt/diane-helentjaris-Ct-Cd-F7-Zi-Ves-unsplash.jpg"
-                  alt="Hand-Building"
-                  loading="lazy"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="content">
-                <p class="heading">Hand-Building</p>
-                <p class="heading">
-                  Explore various hand-building techniques like pinching,
-                  coiling, and slab building to craft unique and intricate
-                  pottery pieces.
-                </p>
-              </div>
-            </div>
+          <div class="card">
+            <img src="https://i.postimg.cc/PxBbsWKr/Screenshot-2023-08-19-094634.png" alt="fedex" loading="lazy" class="img-fluid">
           </div>
         </div>
         <div class="col-3">
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content">
-                <img
-                  src="https://i.postimg.cc/zG2FVVmZ/ilia-zolas-i0-WO-Rze-B2-Y-unsplash.jpg"
-                  alt="Sculpting"
-                  loading="lazy"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="content">
-                <p class="heading">Sculpting</p>
-                <p class="heading">
-                  Use clay to create sculptural pieces, figurines, and other
-                  artistic forms that showcase your creativity and imagination.
-                </p>
-              </div>
-            </div>
+          <div class="card">
+            <img src="https://i.postimg.cc/1trQqHTf/Screenshot-2023-08-19-095222.png" alt="doordash" loading="lazy" class="img-fluid">
           </div>
         </div>
         <div class="col-3">
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content">
-                <img
-                  src="https://i.postimg.cc/pTcmBnZR/toa-heftiba-qtke-IDsgr-Lg-unsplash.jpg"
-                  alt="Glazing"
-                  loading="lazy"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="content">
-                <p class="heading">Glazing</p>
-                <p class="heading">
-                  Experiment with different glazes and color combinations to add
-                  a final touch to your pottery creations. Glazing brings out
-                  vibrant colors and textures.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-3">
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content">
-                <img
-                  src="https://i.postimg.cc/sDYr808N/viviane-okubo-2-Znk-Isutb4g-unsplash.jpg"
-                  alt="Firing"
-                  loading="lazy"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="content">
-                <p class="heading">Firing</p>
-                <p class="heading">
-                  Experience the transformation of clay through the firing
-                  process in kilns. This step turns the clay into durable
-                  ceramic pieces.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content">
-                <img
-                  src="https://i.postimg.cc/yxVrJv1L/mats-hagwall-JL7z-PGJj4c-unsplash.jpg"
-                  alt="Pottery Workshops"
-                  loading="lazy"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="content">
-                <p class="heading">Pottery Workshops</p>
-                <p class="heading">
-                  Participate in workshops tailored for beginners or those
-                  looking to refine their skills. Workshops might focus on
-                  specific techniques, projects, or themes.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content">
-                <img
-                  src="https://i.postimg.cc/4NCx00fD/kazuo-ota-7a-EICAa-JK8-unsplash.jpg"
-                  alt="Custom Pieces"
-                  loading="lazy"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="content">
-                <p class="heading">Custom Pieces</p>
-                <p class="heading">
-                  Collaborate with the studio to create custom pottery pieces
-                  that reflect your personal style and preferences.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content">
-                <img
-                  src="https://i.postimg.cc/PrP3c6xk/5fbeb0dff757755589766126-i-Stock-1014754398.jpg"
-                  alt="Children's Classes"
-                  loading="lazy"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="content">
-                <p class="heading">Children's Classes</p>
-                <p class="heading">
-                  Many pottery studios offer classes designed for kids,
-                  providing a fun and educational environment for young artists
-                  to explore clay.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-3">
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content">
-                <img
-                  src="https://i.postimg.cc/RZmPFvdv/potterydate-03.png"
-                  alt="Date Nights or Group Activities"
-                  loading="lazy"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="content">
-                <p class="heading">Date Nights or Group Activities</p>
-                <p class="heading">
-                  Pottery studios often host date nights, team-building events,
-                  or group activities, allowing you to enjoy pottery with
-                  friends, family, or colleagues.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content">
-                <img
-                  src="https://i.postimg.cc/YSKtjGVh/pottery-studio-membership-in-wisconsin.webp"
-                  alt="Studio Memberships"
-                  loading="lazy"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="content">
-                <p class="heading">Studio Memberships</p>
-                <p class="heading">
-                  Some studios offer memberships that allow you to access the
-                  facilities, equipment, and resources regularly, fostering a
-                  sense of community among fellow artists.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content">
-                <img
-                  src="https://i.postimg.cc/MH4h4gJv/dannie-jing-3-GZlh-ROZIQg-unsplash.jpg"
-                  alt="Art Exhibitions"
-                  loading="lazy"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="content">
-                <p class="heading">Art Exhibitions</p>
-                <p class="heading">
-                  Showcase your pottery creations or participate in studio
-                  exhibitions to share your work with a wider audience.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content">
-                <img
-                  src="https://i.postimg.cc/90Gn80bN/dream-vacations-learning-paper-clay-sculptures-iria-galicia-spain.webp"
-                  alt="Learning About Clay"
-                  loading="lazy"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="content">
-                <p class="heading">Learning About Clay</p>
-                <p class="heading">
-                  Gain insights into the different types of clay, their
-                  properties, and their best applications for specific projects.
-                </p>
-              </div>
-            </div>
+          <div class="card">
+            <img src="https://i.postimg.cc/yNcNd0yb/Screenshot-2023-08-19-095643.png" alt="aramex" loading="lazy" class="img-fluid">
           </div>
         </div>
       </div>
     </section>
+    <div class="customise">
+      <button class="btn" @click="$router.push('/customise')">customise your product here</button>
+    </div>
     <button class="btn">
       <router-link to="/products">browse our products</router-link>
     </button>
@@ -448,94 +192,13 @@ h3 {
   text-decoration: underline;
 }
 
-.card-container {
-  margin-left: 2rem;
-  margin-bottom: 2rem;
-  width: 300px;
-  height: 300px;
-  position: relative;
-  border-radius: 10px;
-}
-
-.card-container::before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  inset: 0;
-  transform: translate3d(0, 0, 0) scale(0.95);
-  filter: blur(20px);
-}
-
-.card {
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  overflow: hidden;
-}
-
-.card .img-content {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 1/1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: scale 0.6s, rotate 0.6s, filter 1s;
-}
-
-.card .img-content svg {
-  width: 80px;
-  height: 50px;
-  fill: #e8e8e8;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.card .content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 10px;
-  color: #e8e8e8;
-  padding: 20px;
-  line-height: 1.5;
-  border-radius: 5px;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(50px);
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.card .content .heading {
-  font-size: small;
-  color: white;
-  font-weight: 700;
-}
-
-.card:hover .content {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.card:hover .img-content {
-  scale: 2.5;
-  rotate: 30deg;
-  filter: blur(7px);
-}
-
-.card:hover .img-content svg {
-  fill: transparent;
-}
-
 .carousel-item {
   width: 20rem;
   height: 30rem;
+}
+
+.customise{
+  margin-bottom: 1rem;
 }
 
 .d-block {
@@ -573,6 +236,40 @@ p {
   border: 2px solid #f7f4f1;
   background-color: #f7f4f1;
   box-shadow: 4px 4px black;
+}
+
+.card {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 350px;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card:hover svg {
+  scale: 0;
 }
 
 @media screen and (max-width: 300px) {

@@ -97,7 +97,6 @@ export default {
 <style scoped>
 #image {
   aspect-ratio: 1/1;
-  width: 10rem;
 }
 
 .btn {
@@ -107,7 +106,7 @@ export default {
 }
 
 .card {
-  height: 50rem !important;
+  height: 65rem !important;
   margin-bottom: 5rem;
 }
 

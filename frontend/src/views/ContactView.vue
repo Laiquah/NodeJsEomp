@@ -45,8 +45,8 @@
           />
         </div>
         <div class="form-group" id="form">
-          <input value="submit" type="submit" />
-          <input type="reset" value="clear" id="clear" />
+          <input value="submit" type="submit" class="btn"/>
+          <input type="reset" value="clear" id="clear" class="btn"/>
         </div>
       </form>
     </div>
@@ -69,6 +69,13 @@ export default {};
 <style scoped>
 #card {
   margin-top: 2rem;
+}
+
+.btn {
+  border: 2px solid #f7f4f1;
+  background-color: #f7f4f1;
+  margin-bottom: 1rem;
+  box-shadow: 4px 4px black;
 }
 .login-card {
   width: 50rem;
