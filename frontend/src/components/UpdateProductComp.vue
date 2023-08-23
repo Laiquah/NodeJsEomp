@@ -4,8 +4,9 @@
     <button
       type="button"
       class="btn"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal2"
+      @click="openEditModal(product.prodID)"
+      :data-bs-toggle="'modal'"
+      :data-bs-target="'#exampleModal' + product.prodID"
     >
       edit
     </button>
@@ -13,15 +14,15 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="exampleModal2"
+      :id="'exampleModal' + product.prodID"
       tabindex="-1"
-      aria-labelledby="exampleModalLabel2"
+      :aria-labelledby="'exampleModalLabel' + product.prodID"
       aria-hidden="true"
     >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel2">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
               Edit Product
             </h1>
             <button
@@ -33,35 +34,34 @@
           </div>
           <div class="modal-body">
             <input
-              :id="product.prodID"
               placeholder="name"
               type="text"
-              v-model="product.prodName"
+              v-model="editingProduct.prodName"
             />
             <input
               placeholder="quantity"
               type="number"
-              v-model="product.quantity"
+              v-model="editingProduct.quantity"
             />
             <input
               placeholder="description"
               type="text"
-              v-model="product.prodDesc"
+              v-model="editingProduct.prodDesc"
             />
             <input
               placeholder="price"
               type="number"
-              v-model="product.price"
+              v-model="editingProduct.price"
             />
             <input
               placeholder="category"
               type="text"
-              v-model="product.category"
+              v-model="editingProduct.category"
             />
             <input
               placeholder="image"
               type="text"
-              v-model="product.prodUrl"
+              v-model="editingProduct.prodUrl"
             />
           </div>
           <div class="modal-footer">
@@ -72,7 +72,7 @@
             >
               Close
             </button>
-            <button type="button" class="btn" @click="updateProduct">
+            <button type="button" class="btn" @click="updateProduct(product.prodID)">
               Save changes
             </button>
           </div>
@@ -83,26 +83,49 @@
 </template>
 
 <script>
+
 export default {
+  props:['product'],
   data() {
     return {
+      editingProduct:{
+         ...this.product
+        },
+        editingProductID: null,
+      model:{
         product: {
-          prodName: null,
-          quantity: null,
-          price: "",
+          prodName: "",
+          quantity: 0,
+          price: 0,
           category: "",
           prodDesc: "",
           prodUrl: "",
         },
+      }
     };
   },
+  computed:{
+    currentProduct(){
+          return this.$store.state.product
+        }
+  },
   methods: {
+    openEditModal(prodID){
+      this.editingProductID = prodID
+      this.editingProduct = {...this.$store.state.products.find(product => product.prodID === prodID)}
+    },
     updateProduct(prodID) {
-      this.$store.dispatch("updateProduct", this.product, prodID);
-      // setTimeout(() => {
-      //   console.log("Updating...");
-      //   location.reload();
-      // }, 1000);
+      this.$store.dispatch("updateProduct", {
+        prodID: prodID,
+        ...this.editingProduct
+      }).then(()=>{
+        console.log("Product updated!")
+        setTimeout(()=>{
+          location.reload()
+        }, 500)
+      }).catch(err =>{
+        console.error("Error updating: ", err)
+      })
     },
   },
 };

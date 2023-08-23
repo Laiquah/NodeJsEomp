@@ -22,11 +22,11 @@ export default createStore({
     },
     setProducts(state, products) {
       state.products = products;
-      console.log(products)
+      console.log(products);
     },
     setProduct(state, product) {
       state.product = product;
-      console.log(product)
+      console.log(product);
     },
     setSpinner(state, spinner) {
       state.spinner = value;
@@ -71,82 +71,94 @@ export default createStore({
         context.commit("setMsg", "an error occured");
       }
     },
-    async createUser(context) {
-      try{
-        const { data } = await axios.post(`${miniURL}user`)
-        context.commit("setUser", data.results);
+    async createUser(context, payload) {
+      try {
+        const res = await axios.post(`${miniURL}user`, payload);
+        const { msg, err } = await res.data;
+        if (err) {
+          context.commit("setMsg", "Something went wrong");
+        }
+        if (msg) {
+          context.commit("setUser", msg);
+        }
       } catch (e) {
         context.commit("setMsg", "an error occured");
       }
     },
     async updateUser(context) {
-      try{
-        const { data } = await axios.patch(`${miniURL}user`)
+      try {
+        const { data } = await axios.patch(`${miniURL}user`);
         context.commit("setUser", data.results);
       } catch (e) {
         context.commit("setMsg", "an error occured");
       }
     },
     async deleteUser(context) {
-      try{
-        const { data } = await axios.delete(`${miniURL}user`)
+      try {
+        const { data } = await axios.delete(`${miniURL}user`);
         context.commit("setUser", data.results);
       } catch (e) {
         context.commit("setMsg", "an error occured");
       }
     },
     async createProduct(context, payload) {
-      console.log("REACHED")
-      try{
-        const { res } = await axios.post(`${miniURL}product`, payload)
-        const {msg, err} = await res.data
-        console.log(msg, err)
-        if(msg){
-          context.commit('setProduct', msg)
+      console.log("REACHED");
+      try {
+        const { res } = await axios.post(`${miniURL}product`, payload);
+        const { msg, err } = await res.data;
+        console.log(msg, err);
+        if (msg) {
+          context.commit("setProduct", msg);
           context.commit("setSpinner", false);
-        } else{
-          context.commit('setMsg', err)
+        } else {
+          context.commit("setMsg", err);
         }
       } catch (e) {
-        context.commit("setMsg", "an error occured")
+        context.commit("setMsg", "an error occured");
       }
     },
     async updateProduct(context, payload) {
-      try{
-        const { res } = await axios.patch(`${miniURL}product/${payload.prodID}`, payload)
-        const {msg, err} = await res.data
-        console.log(msg)
-        if(err){
-          alert("An error has occured, please try again")
+      try {
+        const res = await axios.patch(
+          `${miniURL}product/${payload.prodID}`,
+          payload
+        );
+        const { msg, err } = await res.data;
+        console.log(msg, err);
+        if (err) {
+          console.log("An error has occured: ", err);
+          context.commit("setMsg", err);
         }
-        if(msg){
-          // context.commit('setProduct', msg)
-          context.commit('setMsg', msg)
-        } else{
-          context.commit("setMsg", "An error occured")
+        if (msg) {
+          console.log("Updating");
+          context.commit("setProduct", msg);
+          context.commit("setMsg", "Product updated successfully");
+        } else {
+          console.error("An error has occured while updating the product");
+          context.commit("setMsg", "An error occured");
         }
       } catch (e) {
-        context.commit("setMsg", "an error occured")
+        context.commit("setMsg", "an error occured");
       }
     },
     async deleteProduct(context, prodID) {
-      console.log("Reached")
-      try{
-        const { res } = await axios.delete(`${miniURL}product/${prodID}`)
-        const {msg, err} = await res.data
-        if(err){
-          alert('An error has occured, please try again')
+      console.log("Reached");
+      try {
+        const { res } = await axios.delete(`${miniURL}product/${prodID}`);
+        const { msg, err } = await res.data;
+        if (err) {
+          alert("An error has occured, please try again");
         }
-        if(msg){
-          context.commit('setProduct', msg)
-          context.commit("setSpinner", false)
-        } else{
-          context.commit('setMsg', "An error occured")
+        if (msg) {
+          context.commit("setProduct", msg);
+          context.commit("setSpinner", false);
+        } else {
+          context.commit("setMsg", "An error occured");
         }
       } catch (e) {
-        context.commit("setMsg", "an error occured")
+        context.commit("setMsg", "an error occured");
       }
-    }
+    },
   },
   modules: {},
 });

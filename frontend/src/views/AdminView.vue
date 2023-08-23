@@ -57,9 +57,9 @@
             <td>{{ product.price }}</td>
             <td>{{ product.category }}</td>
             <td>{{ product.prodDesc }}</td>
-            <td><img :src="product.prodUrl" :alt="product.prodName" class="img-fluid image" loading="lazy"></td>
+            <td><img :src="product.prodUrl" :alt="product.prodUrl" class="img-fluid image" loading="lazy"></td>
             <td>
-              <updateProduct :key="product.prodID"/>
+              <updateProduct :product="product"/>
               <button @click="deleteProduct(product.prodID)" class="btn">delete</button></td>
           </tr>
           <tr v-else>
