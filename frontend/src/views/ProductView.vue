@@ -97,6 +97,7 @@ export default {
 <style scoped>
 #image {
   aspect-ratio: 1/1;
+  width: 10rem;
 }
 
 .btn {

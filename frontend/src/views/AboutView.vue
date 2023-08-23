@@ -2,7 +2,6 @@
   <div class="about">
     <h3>Who are ClayExpressions?</h3>
     <div>
-      <p>
         A pottery company dedicated to turning simple clay into exceptional art.
         We craft exquisite pottery pieces that combine aesthetics with
         functionality. Our foundation in craftsmanship and creativity sets us
@@ -15,7 +14,6 @@
         experiences. Our pottery isn't just objects; they're enriching
         expressions of art. Discover the tactile beauty and creative spirit in
         each piece as we celebrate the timeless artistry of clay.
-      </p>
     </div>
     <h3>Team</h3>
     <section id="team">
@@ -138,18 +136,18 @@
     </section>
     <h3>services</h3>
     <section id="services">
-      <p>
+      <div>
         We offer a variety of services, including doorstep delivery.
         Additionally, we operate an art shop where we teach people how to create
         their desired designs. Moreover, we have a studio where you can
         personally craft your own items. Our studio is called ClayCraft Haven.
-      </p>
+      </div>
     </section>
     <h3>partnerships</h3>
     <section id="partnerships"></section>
     <h3>ClayCraft Haven</h3>
     <section id="studio">
-      <p>
+      <div>
         Where clay and imagination unite, crafting timeless artistry that
         enriches your space. Our studio blends ancient pottery techniques with
         modern innovation, welcoming artisans and beginners alike to a community
@@ -160,7 +158,7 @@
         through expert guidance, transforming raw material into personalized
         art. Discover a sanctuary for those who express through clay, uniting
         individuality and artistry.
-      </p>
+      </div>
       <p>At ClayCraft Haven you have the opportunity to:</p>
       <div class="row">
         <div class="col-3">
