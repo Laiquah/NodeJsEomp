@@ -8,7 +8,7 @@
         <h3>Where We Shape Dreams, Craft Memories</h3>
       </div>
       <div class="text">
-        <button><router-link to="/about">more about us</router-link></button>
+        <button class="btn"><router-link to="/about">more about us</router-link></button>
       </div>
     </div>
     <div class="pro">
@@ -105,6 +105,12 @@ button {
   grid-row-gap: 24px;
   width: 100%;
 }
+
+.btn {
+  border: 2px solid #f7f4f1;
+  background-color: #f7f4f1;
+  box-shadow: 4px 4px black;
+}
 .card__bg1 {
   position: relative;
   height: 50vh;
@@ -153,5 +159,30 @@ button {
 h2 {
   color: black;
   padding: 1rem;
+}
+
+@media screen and (max-width:300px) {
+  .card{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+  }
+
+  .card__bg1{
+    width: 280px;
+    margin: 0;
+  }
+
+  .btn{
+    width: 280px;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .card{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+  }
 }
 </style>

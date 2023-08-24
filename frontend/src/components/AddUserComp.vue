@@ -30,42 +30,66 @@
             ></button>
           </div>
           <div class="modal-body">
+            <label for="firstName">First Name:</label>
             <input
+              required
+              id="firstName"
               type="text"
               placeholder="first name"
               v-model="model.user.firstName"
             />
+            <label for="lastName">Last Name:</label>
             <input
+              required
+              id="lastName"
               type="text"
               placeholder="last name"
               v-model="model.user.lastName"
             />
+            <label for="userAge">Age:</label>
             <input
+              required
+              id="userAge"
               type="number"
               placeholder="age"
               v-model="model.user.userAge"
             />
+            <label for="gender">Gender:</label>
             <input
+              required
+              id="gender"
               type="text"
               placeholder="gender"
               v-model="model.user.gender"
             />
+            <label for="userRole">Role:</label>
             <input
+              required
+              id="userRole"
               type="text"
               placeholder="role"
               v-model="model.user.userRole"
             />
+            <label for="email">Email Address</label>
             <input
+              required
+              id="email"
               type="text"
               placeholder="email address"
               v-model="model.user.emailAdd"
             />
+            <label for="password">Password:</label>
             <input
+              required
+              id="password"
               type="text"
               placeholder="password"
               v-model="model.user.userPass"
             />
+            <label for="Profile Picture:"></label>
             <input
+              required
+              id="profilePic"
               type="text"
               placeholder="profile image"
               v-model="model.user.userProfile"

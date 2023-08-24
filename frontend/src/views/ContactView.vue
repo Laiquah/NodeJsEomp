@@ -44,9 +44,9 @@
             placeholder="contact number"
           />
         </div>
-        <div class="form-group" id="form">
-          <input value="submit" type="submit" class="btn"/>
-          <input type="reset" value="clear" id="clear" class="btn"/>
+        <div id="form">
+          <button value="submit" type="submit" class="btn">submit</button>
+          <button type="reset" value="clear" id="clear" class="btn">clear</button>
         </div>
       </form>
     </div>
@@ -139,17 +139,6 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-#clear {
-  width: 25%;
-  background-color: black;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
 input[type="submit"]:hover {
   background-color: white;
   color: black;
@@ -169,5 +158,23 @@ input[type="submit"]:hover {
   border: 2px solid #f7f4f1;
   background-color: #f7f4f1;
   box-shadow: 4px 4px black;
+}
+
+@media screen and (max-width:300px){
+  #card{
+    width: 280px;
+  }
+
+  .btn{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+}
+
+@media screen and (max-width:700px) {
+  #card{
+    width: 680px;
+  }
 }
 </style>

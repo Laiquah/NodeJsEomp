@@ -30,32 +30,50 @@
             ></button>
           </div>
           <div class="modal-body">
+            <label for="productname">Product Name:</label>
             <input
+              required
+              id="productname"
               placeholder="product Name"
               type="text"
               v-model="model.product.prodName"
             />
+            <label for="quantity">Quantity:</label>
             <input
+              required
+              id="quantity"
               placeholder="quantity"
               type="number"
               v-model="model.product.quantity"
             />
+            <label for="description">Description:</label>
             <input
+              required
+              id="description"
               placeholder="product desc"
               type="text"
               v-model="model.product.prodDesc"
             />
+            <label for="price">Price:</label>
             <input
+              required
+              id="price"
               placeholder="price"
               type="number"
               v-model="model.product.price"
             />
+            <label for="category">Category</label>
             <input
+              required
+              id="category"
               placeholder="category"
               type="text"
               v-model="model.product.category"
             />
+            <label for="productUrl">Product Image:</label>
             <input
+              required
+              id="productUrl"
               placeholder="product image"
               type="text"
               v-model="model.product.prodUrl"
@@ -94,10 +112,10 @@ export default {
   methods: {
     createProduct() {
       this.$store.dispatch("createProduct", this.model.product);
-      setTimeout(()=>{
-        console.log("Reloading now...")
-        location.reload()
-      }, 500)
+      setTimeout(() => {
+        console.log("Reloading now...");
+        location.reload();
+      }, 500);
     },
   },
 };
