@@ -147,6 +147,7 @@ export default createStore({
           context.commit("setMsg", err);
         }
         if (msg) {
+          context.dispatch("fetchProducts")
           context.commit("setProduct", msg);
           context.commit("setMsg", "Successfully updated product.");
         }
