@@ -163,4 +163,10 @@ export default {
   margin-bottom: 1rem;
   box-shadow: 4px 4px black;
 }
+
+@media screen and (max-width:300px) {
+  .table{
+    width: 280px !important;
+  }
+}
 </style>

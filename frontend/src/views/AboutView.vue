@@ -1,19 +1,24 @@
 <template>
   <div class="about">
     <h3>Who are ClayExpressions?</h3>
-    <div>
-        A pottery company dedicated to turning simple clay into exceptional art.
-        We craft exquisite pottery pieces that combine aesthetics with
-        functionality. Our foundation in craftsmanship and creativity sets us
-        apart. Skilled artisans meticulously handcraft each piece, infusing
-        expertise and imagination into every detail. Time-honored techniques
-        like wheel throwing and glazing create a fusion of tradition and
-        innovation. Our collection ranges from elegant vases inspired by nature
-        to artistic tableware, each showcasing clay's versatility. We connect
-        people with personal, meaningful art that sparks emotions and elevates
-        experiences. Our pottery isn't just objects; they're enriching
-        expressions of art. Discover the tactile beauty and creative spirit in
-        each piece as we celebrate the timeless artistry of clay.
+    <div class="div">
+      <div>
+        <img src="https://i.postimg.cc/2y6Cc6N1/Screenshot-2023-08-13-184438-removebg-preview.png" alt="logo" loading="lazy" class="img-fluid logo">
+      </div>
+      <div class="paragraph1">
+          A pottery company dedicated to turning simple clay into exceptional art.
+          We craft exquisite pottery pieces that combine aesthetics with
+          functionality. Our foundation in craftsmanship and creativity sets us
+          apart. Skilled artisans meticulously handcraft each piece, infusing
+          expertise and imagination into every detail. Time-honored techniques
+          like wheel throwing and glazing create a fusion of tradition and
+          innovation. Our collection ranges from elegant vases inspired by nature
+          to artistic tableware, each showcasing clay's versatility. We connect
+          people with personal, meaningful art that sparks emotions and elevates
+          experiences. Our pottery isn't just objects; they're enriching
+          expressions of art. Discover the tactile beauty and creative spirit in
+          each piece as we celebrate the timeless artistry of clay.
+      </div>
     </div>
     <h3>Team</h3>
     <section id="team">
@@ -136,34 +141,34 @@
     </section>
     <h3>services</h3>
     <section id="services">
-      <div>
+      <div class="paragraph2">
         We offer a variety of services, including doorstep delivery.
         Additionally, we operate an art shop where we teach people how to create
-        their desired designs. Moreover, we have a studio where you can
-        personally craft your own items. Our studio is called ClayCraft Haven.
+        their desired designs. Moreover, we have a section where you can
+        email a personalised copy of what you want and we will print that on an item you want.
       </div>
     </section>
     <h3>partnerships</h3>
     <section id="partnerships">
-      <div class="row justify-content-center">
-        <div class="col-3">
-          <div class="card">
-            <img src="https://i.postimg.cc/rm700h25/Screenshot-2023-08-19-094202.png" alt="dhl" loading="lazy" class="img-fluid">
+      <div class="row justify-content-center flex">
+        <div class="col-3 flex">
+          <div class="card flex">
+            <img src="https://i.postimg.cc/rm700h25/Screenshot-2023-08-19-094202.png" alt="dhl" loading="lazy" class="img-fluid2">
           </div>
         </div>
         <div class="col-3">
           <div class="card">
-            <img src="https://i.postimg.cc/PxBbsWKr/Screenshot-2023-08-19-094634.png" alt="fedex" loading="lazy" class="img-fluid">
+            <img src="https://i.postimg.cc/PxBbsWKr/Screenshot-2023-08-19-094634.png" alt="fedex" loading="lazy" class="img-fluid2">
           </div>
         </div>
         <div class="col-3">
           <div class="card">
-            <img src="https://i.postimg.cc/1trQqHTf/Screenshot-2023-08-19-095222.png" alt="doordash" loading="lazy" class="img-fluid">
+            <img src="https://i.postimg.cc/1trQqHTf/Screenshot-2023-08-19-095222.png" alt="doordash" loading="lazy" class="img-fluid2">
           </div>
         </div>
         <div class="col-3">
           <div class="card">
-            <img src="https://i.postimg.cc/yNcNd0yb/Screenshot-2023-08-19-095643.png" alt="aramex" loading="lazy" class="img-fluid">
+            <img src="https://i.postimg.cc/yNcNd0yb/Screenshot-2023-08-19-095643.png" alt="aramex" loading="lazy" class="img-fluid2">
           </div>
         </div>
       </div>
@@ -182,12 +187,30 @@ export default {};
 </script>
 
 <style scoped>
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .card {
   background-color: #f7f4f1;
+}
+
+#team{
+  margin-bottom: 3rem;
 }
 .about {
   background-color: #f7f4f1;
 }
+
+#services{
+  margin-bottom: 3rem;
+}
+
+.logo{
+  width: 100rem;
+}
+
 h3 {
   text-decoration: underline;
 }
@@ -212,6 +235,14 @@ h3 {
   height: 30rem;
 }
 
+.paragraph1{
+  font-size: smaller;
+}
+.paragraph2{
+  font-size: smaller;
+  margin-bottom: 2rem;
+}
+
 .carousel-inner {
   width: 20rem;
   height: 30rem;
@@ -221,6 +252,10 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#partnerships{
+  margin-bottom: 3rem;
 }
 
 .row {
@@ -238,6 +273,12 @@ p {
   box-shadow: 4px 4px black;
 }
 
+.div{
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
 .card {
   position: relative;
   margin-bottom: 2rem;
@@ -251,6 +292,10 @@ p {
   perspective: 1000px;
   box-shadow: 0 0 0 5px #ffffff80;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.img-fluid2{
+  width:16rem;
 }
 
 .card svg {
@@ -273,13 +318,43 @@ p {
 }
 
 @media screen and (max-width: 300px) {
-  .col-3 {
-    width: 10rem;
+  .col-3{
+    width: 280px;
+  }
+  .carousel-inner{
+    width: 280px;
   }
 
-  .card {
-    width: 250px;
-    margin: 0;
+  .carousel-item{
+    width: 280px    ;
+  }
+
+  .d-block{
+    width: 280px;
+  }
+
+  .card{
+    width: 280px;
+  }
+
+  .img-fluid2{
+    width: 13rem;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .card{
+    display: flex;
+    flex-direction: column;
+    width: 680px;
+  }
+
+  .col-3{
+    width: 680px;
+  }
+
+  .img-fluid2{
+    width: 35rem;
   }
 }
 </style>

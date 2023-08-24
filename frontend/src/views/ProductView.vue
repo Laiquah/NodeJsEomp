@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>products</h1>
-    <form class="d-flex mb-2" role="search">
+    <form class="d-flex mb-2 searchBTN" role="search">
       <input
         class="form-control"
         type="search"
@@ -10,9 +10,9 @@
       />
       <button class="btn" type="submit">Search</button>
     </form>
-    <div class="row" v-if="products">
-      <div class="col-4" v-for="product in products" :key="product">
-        <div class="card" id="test" style="width: 100%; height: 100%">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 flex" v-if="products">
+      <div class="col flex" v-for="product in products" :key="product">
+        <div class="card flex" id="test">
           <img
             :src="product.prodUrl"
             class="card-img-top img-fluid"
@@ -95,6 +95,12 @@ export default {
 </script>
 
 <style scoped>
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #image {
   aspect-ratio: 1/1;
 }
@@ -106,12 +112,17 @@ export default {
 }
 
 .card {
-  height: 65rem !important;
+  height: 44rem !important;
   margin-bottom: 5rem;
+  width: 75% !important;
+}
+
+.card-title{
+  text-decoration: underline;
 }
 
 .category {
-  height: 15%;
+  height: 10%;
 }
 
 .price {
@@ -122,7 +133,7 @@ export default {
 }
 
 .description {
-  height: 30%;
+  height: 25%;
 }
 
 .card-text {
@@ -136,5 +147,44 @@ export default {
 
 .button {
   height: 10%;
+}
+
+.row{
+  --bs-gutter-x: 0;
+  display: flex !important;
+  justify-content: space-between !important ;
+}
+
+@media screen and (max-width:300px) {
+  .card{
+    width: 295px !important;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .searchBTN{
+    width: 290px !important;
+  }
+
+  .row{
+    --bs-gutter-x: 0;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .searchBTN{
+    width: 690px;
+  }
+
+  .card{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .row{
+    --bs-gutter-x:0;
+  }
 }
 </style>
