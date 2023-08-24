@@ -40,7 +40,7 @@ export default createStore({
     },
     setMsg(state, msg) {
       state.msg = msg;
-    },
+    }
   },
   actions: {
     async fetchUsers(context) {

@@ -8,7 +8,7 @@
         placeholder="Search"
         aria-label="Search"
       />
-      <button class="btn" type="submit">Search</button>
+      <button class="btn" type="submit" @click="searchProducts">Search</button>
     </form>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 flex" v-if="products">
       <div class="col flex" v-for="product in products" :key="product">
@@ -78,6 +78,9 @@ export default {
     products() {
       return this.$store.state.products;
     },
+    searchWatch(){
+      return this.products.filter(w =>w.name.includes(this.searchWatches))
+    }
   },
   mounted() {
     this.$store.dispatch("fetchProducts");
@@ -91,6 +94,11 @@ export default {
       this.$router.push({ name: "ProductView", params: { prodID: prodID } });
     },
   },
+  data() {
+    return{
+      searchProducts: '',
+    }
+  }
 };
 </script>
 
