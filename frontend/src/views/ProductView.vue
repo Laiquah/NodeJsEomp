@@ -2,26 +2,27 @@
   <div>
     <h1>products</h1>
     <form class="d-flex mb-2 searchBTN" role="search">
-      <input
-        class="form-control"
-        type="search"
-        placeholder="Search"
-        aria-label="Search"
-        v-model="searchProducts"
-      />
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search" v-model="searchProducts" />
       <button class="btn" type="submit" @click="searchProducts">Search</button>
     </form>
+    <div class="sort-dropdown">
+      <label for="sort">Sort by: </label>
+      <select id="sort" v-model="sortBy">
+        <option value="default">Default</option>
+        <option value="price">Price</option>
+        <option value="category">Category</option>
+        <option value="alphabetical">Alphabetical</option>
+      </select>
+      <button @click="toggleSortDirection">
+        {{ sort === 'asc' ? '↑' : '↓' }}
+      </button>
+    </div>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 flex" v-if="products">
       <div class="col flex" v-for="product in filteredProducts" :key="product">
         <div class="card flex" id="test">
           <center>
-            <img
-              :src="product.prodUrl"
-              class="card-img-top img-fluid"
-              id="image"
-              loading="lazy"
-              :alt="product.prodName"
-            />
+            <img :src="product.prodUrl" class="card-img-top img-fluid" id="image" loading="lazy"
+              :alt="product.prodName" />
           </center>
           <div class="card-body">
             <div class="title">
@@ -82,27 +83,38 @@ export default {
     products() {
       return this.$store.state.products;
     },
-    filteredProducts(){
-      if (this.searchProducts === ''){
-        return this.products
-      } else{
-        return this.products.filter(product => product.prodName.toLowerCase().includes(this.searchProducts.toLowerCase()) ||
+    filteredProducts() {
+      let filtered = this.products
+      if(this.searchProducts !== ''){
+        filtered = filtered.filter(product => product.prodName.toLowerCase().includes(this.searchProducts.toLowerCase()) || 
         product.category.toLowerCase().includes(this.searchProducts.toLowerCase()))
-      } 
+      }
+      if(this.sortBy === 'price'){
+        filtered = filtered.sort((a, b)=> (this.sort === 'asc' ? a.price - b.price : b.price - a.price))
+      } else if(this.sortBy === 'category'){
+        filtered = filtered.sort((a, b)=> a.category.localeCompare(b.category) * (this.sort === 'asc' ? 1 : -1))
+      } else if(this.sortBy === 'alphabetical'){
+        filtered = filtered.sort((a, b)=> a.prodName.localeCompare(b.prodName) * (this.sort === 'asc' ? 1 : -1))
+      }
+
+      return filtered
     },
-    searchWatch(){
-      return this.products.filter(w =>w.name.includes(this.searchWatches))
+    searchWatch() {
+      return this.products.filter(w => w.name.includes(this.searchWatches))
     }
   },
   mounted() {
     this.$store.dispatch("fetchProducts");
   },
   methods: {
-    searchProducts(e){
+    searchProducts(e) {
       e.preventDefault()
       this.searchProducts = this.searchProducts.trim()
     },
-    clearSearch(){
+    toggleSortDirection() {
+      this.sort = this.sort === 'asc' ? 'desc' : 'asc'
+    },
+    clearSearch() {
       this.searchProducts = ''
     },
     viewProduct(prodID) {
@@ -114,15 +126,17 @@ export default {
     }
   },
   data() {
-    return{
+    return {
       searchProducts: '',
+      sortBy: "",
+      sort: ""
     }
   }
 };
 </script>
 
 <style scoped>
-.flex{
+.flex {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,7 +155,7 @@ export default {
   box-shadow: 4px 4px black;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: black;
   box-shadow: 4px 4px white;
   color: white;
@@ -152,7 +166,7 @@ export default {
   width: 75% !important;
 }
 
-.card-title{
+.card-title {
   text-decoration: underline;
 }
 
@@ -163,6 +177,7 @@ export default {
 .price {
   height: 10%;
 }
+
 .quantity {
   height: 10%;
   margin-top: .1rem;
@@ -186,56 +201,57 @@ export default {
   height: 10%;
 }
 
-.row{
+.row {
   --bs-gutter-x: 0;
   display: flex !important;
-  justify-content: space-between !important ;
+  justify-content: space-between !important;
 }
 
 @media screen and (max-width:300px) {
-  .card{
+  .card {
     width: 295px !important;
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
   }
 
-  .searchBTN{
+  .searchBTN {
     width: 290px !important;
   }
 
-  .row{
+  .row {
     --bs-gutter-x: 0;
   }
 }
 
 @media screen and (max-width:700px) {
-  .searchBTN{
+  .searchBTN {
     width: 690px;
   }
 
-  #image{
+  #image {
     width: 15rem;
   }
 
-  .quantity{
+  .quantity {
     margin-top: .1rem;
     margin-bottom: .5rem;
   }
 
-  .card{
+  .card {
     width: 600px;
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
   }
-  .row{
-    --bs-gutter-x:0;
+
+  .row {
+    --bs-gutter-x: 0;
   }
 }
 
 @media screen and (min-width: 1592px) {
-  .card{
+  .card {
     width: 1591px;
   }
 
