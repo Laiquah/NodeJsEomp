@@ -33,31 +33,37 @@
             ></button>
           </div>
           <div class="modal-body">
+            <label>Product name:</label>
             <input
               placeholder="name"
               type="text"
               v-model="editingProduct.prodName"
             />
+            <label>Product quantity:</label>
             <input
               placeholder="quantity"
               type="number"
               v-model="editingProduct.quantity"
             />
+            <label>Product description:</label>
             <input
               placeholder="description"
               type="text"
               v-model="editingProduct.prodDesc"
             />
+            <label>Product price:</label>
             <input
               placeholder="price"
               type="number"
               v-model="editingProduct.price"
             />
+            <label>Product category:</label>
             <input
               placeholder="category"
               type="text"
               v-model="editingProduct.category"
             />
+            <label>Product image:</label>
             <input
               placeholder="image"
               type="text"
@@ -147,5 +153,11 @@ export default {
   margin-bottom: 1rem;
   color: black;
   box-shadow: 4px 4px black;
+}
+
+input {
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 2rem;
 }
 </style>

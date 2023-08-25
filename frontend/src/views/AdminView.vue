@@ -53,7 +53,7 @@
       <h1>products</h1>
       <div class="sort-dropdown">
         <button class="btn" @click="toggleSortDirection">
-          Filter by: {{ sort === 'asc' ? 'ascending' : 'descending ' }}
+          Filter by: {{ sort === "asc" ? "ascending" : "descending " }}
         </button>
         <button class="btn" @click="refresh">Refresh</button>
       </div>
@@ -122,8 +122,8 @@ export default {
   data() {
     return {
       sort: "",
-      sortBy: "alphabetical",
-      sortMode:'prodID'
+      sortBy: "id",
+      sortMode: "prodID",
     };
   },
   computed: {
@@ -140,15 +140,19 @@ export default {
       return this.$store.state.user || [];
     },
     filteredProducts() {
-      let filtered = [...this.products]
-      if (this.sortBy === "alphabetical") {
+      let filtered = [...this.products];
+      if (this.sortBy === "name") {
         filtered = filtered.sort(
           (a, b) =>
             a.prodName.localeCompare(b.prodName) *
             (this.sort === "asc" ? 1 : -1)
         );
+      } else if (this.sortBy === "id") {
+        filtered = filtered.sort(
+          (a, b) => (this.sort === "asc" ? 1 : -1) * (a.prodID - b.prodID)
+        );
       }
-      return filtered
+      return filtered;
     },
   },
   async mounted() {
@@ -164,9 +168,13 @@ export default {
         }, 500);
       }
     },
+    refresh() {
+      this.sortBy = "id";
+    },
     toggleSortDirection() {
-      console.log("reached")
-      this.sort = this.sort === 'asc' ? 'desc' : 'asc'
+      console.log("reached");
+      this.sortBy = 'name'
+      this.sort = this.sort === "asc" ? "desc" : "asc";
     },
     deleteUser(id) {
       if (confirm("Are you sure you want to delete this user?")) {
@@ -186,6 +194,11 @@ export default {
 }
 .table {
   background-color: #f7f4f1;
+}
+
+.sort-dropdown{
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn {

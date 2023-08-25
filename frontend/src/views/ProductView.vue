@@ -5,15 +5,15 @@
           <input class="form-control" type="search" id="search" placeholder="Search" aria-label="Search" v-model="searchProducts" />
       </form>
     <div class="sort-dropdown">
-      <label for="sort">Sort by: </label>
+      <label for="sort" id="sort2">Sort by: </label>
       <select id="sort" v-model="sortBy">
         <option value="default">Default</option>
         <option value="price">Price</option>
         <option value="category">Category</option>
         <option value="alphabetical">Alphabetical</option>
       </select>
-      <button @click="toggleSortDirection">
-        {{ sort === 'asc' ? '↑' : '↓' }}
+      <button class="btn" @click="toggleSortDirection">
+        {{ sort === 'asc' ? 'ascending' : 'descending' }}
       </button>
     </div>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 flex" v-if="products">
@@ -133,7 +133,25 @@ export default {
 </script>
 
 <style scoped>
+#sort2{
+  font-size:smaller;
+}
+
+
+#sort{
+  margin-top: 2rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  width: 10rem;
+  height: 2rem;
+}
 .flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBTN{
   display: flex;
   justify-content: center;
   align-items: center;
