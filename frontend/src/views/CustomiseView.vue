@@ -32,7 +32,7 @@
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
                                   <div class="col-md-4">
-                                    <img src="" class="img-fluid rounded-start" alt="jugs">
+                                    <img src="https://i.postimg.cc/268w9Mgv/b89462d3ee9165f1cdf7d3cf06f783f5.webp" class="img-fluid rounded-start" alt="jugs">
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body">
@@ -46,7 +46,7 @@
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
                                   <div class="col-md-4">
-                                    <img src="" class="img-fluid rounded-start" alt="candlestick">
+                                    <img src="https://i.postimg.cc/LXJGJJvn/97095-grande.webp" class="img-fluid rounded-start" alt="candlestick">
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body">
@@ -60,7 +60,7 @@
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
                                   <div class="col-md-4">
-                                    <img src="" class="img-fluid rounded-start" alt="bowls and ramekins">
+                                    <img src="https://i.postimg.cc/9QTM7f8g/bowl-on-stilts-firebrick.jpg" class="img-fluid rounded-start" alt="bowls and ramekins">
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body">
@@ -88,7 +88,7 @@
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
                                   <div class="col-md-4">
-                                    <img src="" class="img-fluid rounded-start" alt="plates">
+                                    <img src="https://i.postimg.cc/6601BLBY/Bare-DIN-SAL-PLATE-SNOW-web-1800x1800.webp" class="img-fluid rounded-start" alt="plates">
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body">
@@ -102,7 +102,7 @@
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
                                   <div class="col-md-4">
-                                    <img src="" class="img-fluid rounded-start" alt="platters and boats">
+                                    <img src="https://i.postimg.cc/268w9Mgv/b89462d3ee9165f1cdf7d3cf06f783f5.webp" class="img-fluid rounded-start" alt="platters and boats">
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body">
@@ -116,7 +116,7 @@
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
                                   <div class="col-md-4">
-                                    <img src="https://i.postimg.cc/x1qvNkJV/oshin-khandelwal-fq839f-SNEuo-unsplash.jpg" class="img-fluid rounded-start" alt="vases">
+                                    <img src="https://i.postimg.cc/x1qvNkJV/oshin-khandelwal-fq839f-SNEuo-unsplash.jpg" class="img-fluid rounded-start " alt="vases">
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body">
@@ -130,7 +130,7 @@
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
                                   <div class="col-md-4">
-                                    <img src="" class="img-fluid rounded-start" alt="teapots">
+                                    <img src="https://i.postimg.cc/8kMtt2KF/GUEST-26b95bbd-59a0-4805-a04e-ca5af98b3fe7.jpg" class="img-fluid rounded-start" alt="teapots">
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body">
@@ -144,6 +144,8 @@
                 </div>
                 <br>
                 Design Plan: Decide the design, considering colors, patterns, textures, and motifs. Sketch or create a digital mockup.
+                <br>
+                <p>Choose a design you would like to put on your pottery piece and email it to us. We will then paint it on for you and ship it to you.</p>
             </div>
         </div>   
     </div>
@@ -177,5 +179,9 @@ h4{
 
 .part2{
     margin-bottom: 2rem;
+}
+
+.img-fluid{
+  aspect-ratio: 1/1;
 }
 </style>
