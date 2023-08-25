@@ -131,11 +131,17 @@ export default {
     deleteProduct(prodID) {
       if (confirm("Are you sure you want to delete this product?")) {
         this.$store.dispatch("deleteProduct", prodID);
+        setTimeout(()=>{
+          location.reload()
+        }, 500)
       }
     },
     deleteUser(id) {
       if (confirm("Are you sure you want to delete this user?")) {
         this.$store.dispatch("deleteUser", id);
+        setTimeout(()=>{
+          location.reload()
+        }, 500)
       }
     },
   },

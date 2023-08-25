@@ -114,7 +114,7 @@ export default createStore({
           context.commit("setMsg", "An error has occured")
         }
         if(msg){
-          context.dispatch("fetchProducts")
+          context.dispatch("fetchUsers")
           context.commit('setUser', msg)
           console.log("User deleted successfully")
         }

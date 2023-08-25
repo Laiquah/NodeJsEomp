@@ -7,11 +7,12 @@
         type="search"
         placeholder="Search"
         aria-label="Search"
+        v-model="searchProducts"
       />
       <button class="btn" type="submit" @click="searchProducts">Search</button>
     </form>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 flex" v-if="products">
-      <div class="col flex" v-for="product in products" :key="product">
+      <div class="col flex" v-for="product in filteredProducts" :key="product">
         <div class="card flex" id="test">
           <img
             :src="product.prodUrl"
@@ -79,6 +80,14 @@ export default {
     products() {
       return this.$store.state.products;
     },
+    filteredProducts(){
+      if (this.searchProducts === ''){
+        return this.products
+      } else{
+        return this.products.filter(product => product.prodName.toLowerCase().includes(this.searchProducts.toLowerCase()) ||
+        product.category.toLowerCase().includes(this.searchProducts.toLowerCase()))
+      } 
+    },
     searchWatch(){
       return this.products.filter(w =>w.name.includes(this.searchWatches))
     }
@@ -87,13 +96,20 @@ export default {
     this.$store.dispatch("fetchProducts");
   },
   methods: {
+    searchProducts(e){
+      e.preventDefault()
+      this.searchProducts = this.searchProducts.trim()
+    },
+    clearSearch(){
+      this.searchProducts = ''
+    },
     viewProduct(prodID) {
       const chosenProd = this.products.find(
         (product) => product.prodID === prodID
       );
       this.$store.commit("setSelectedProduct", chosenProd);
       this.$router.push({ name: "ProductView", params: { prodID: prodID } });
-    },
+    }
   },
   data() {
     return{
