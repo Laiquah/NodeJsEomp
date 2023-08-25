@@ -207,6 +207,7 @@ export default {};
 
 .logo{
   width: 80rem;
+  height: 10rem;
 }
 
 h3 {
@@ -239,6 +240,7 @@ a:hover{
 
 .paragraph1{
   font-size: smaller;
+  margin-top: 2rem;
 }
 .paragraph2{
   font-size: smaller;
@@ -301,6 +303,10 @@ p {
   perspective: 1000px;
   box-shadow: 0 0 0 5px #ffffff80;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+h3{
+  margin-top: 2rem;
 }
 
 .img-fluid2{

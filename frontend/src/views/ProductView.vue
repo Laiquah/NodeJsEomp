@@ -1,10 +1,9 @@
 <template>
   <div>
     <h1>products</h1>
-    <form class="d-flex mb-2 searchBTN" role="search">
-      <input class="form-control" type="search" placeholder="Search" aria-label="Search" v-model="searchProducts" />
-      <button class="btn" type="submit" @click="searchProducts">Search</button>
-    </form>
+      <form class="d-flex mb-2 searchBTN" role="search">
+          <input class="form-control" type="search" id="search" placeholder="Search" aria-label="Search" v-model="searchProducts" />
+      </form>
     <div class="sort-dropdown">
       <label for="sort">Sort by: </label>
       <select id="sort" v-model="sortBy">
@@ -99,9 +98,7 @@ export default {
 
       return filtered
     },
-    searchWatch() {
-      return this.products.filter(w => w.name.includes(this.searchWatches))
-    }
+
   },
   mounted() {
     this.$store.dispatch("fetchProducts");
@@ -147,6 +144,12 @@ export default {
   width: 20rem;
   height: 15rem;
   margin-top: .5rem;
+}
+
+#search{
+  width: 20rem;
+  display: flex !important;
+  justify-content: center !important;
 }
 
 .btn {

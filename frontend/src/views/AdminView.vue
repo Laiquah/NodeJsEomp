@@ -3,54 +3,60 @@
     <h1>Users</h1>
     <addUser />
     <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>name</th>
-          <th>surname</th>
-          <th>age</th>
-          <th>gender</th>
-          <th>role</th>
-          <th>email address</th>
-          <th>profile image</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody v-for="user in users" :key="user.userID">
-        <tr v-if="users">
-          <td>{{ user.userID }}</td>
-          <td>{{ user.firstName }}</td>
-          <td>{{ user.lastName }}</td>
-          <td>{{ user.userAge }}</td>
-          <td>{{ user.gender }}</td>
-          <td>{{ user.userRole }}</td>
-          <td>{{ user.emailAdd }}</td>
-          <td>
-            <img
-              :src="user.userProfile"
-              :alt="user.firstName"
-              loading="lazy"
-              class="img-fluid image"
-            />
-          </td>
-          <td>
-            <updateUser :user="user" /><button
-              class="btn"
-              @click="deleteUser(user.userID)"
-            >
-              delete
-            </button>
-          </td>
-        </tr>
-        <tr v-else>
-          <Spinner />
-        </tr>
-      </tbody>
-    </table>
-  </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>name</th>
+            <th>surname</th>
+            <th>age</th>
+            <th>gender</th>
+            <th>role</th>
+            <th>email address</th>
+            <th>profile image</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody v-for="user in users" :key="user.userID">
+          <tr v-if="users">
+            <td>{{ user.userID }}</td>
+            <td>{{ user.firstName }}</td>
+            <td>{{ user.lastName }}</td>
+            <td>{{ user.userAge }}</td>
+            <td>{{ user.gender }}</td>
+            <td>{{ user.userRole }}</td>
+            <td>{{ user.emailAdd }}</td>
+            <td>
+              <img
+                :src="user.userProfile"
+                :alt="user.firstName"
+                loading="lazy"
+                class="img-fluid image"
+              />
+            </td>
+            <td>
+              <updateUser :user="user" /><button
+                class="btn"
+                @click="deleteUser(user.userID)"
+              >
+                delete
+              </button>
+            </td>
+          </tr>
+          <tr v-else>
+            <Spinner />
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <div>
       <h1>products</h1>
+      <div class="sort-dropdown">
+        <button class="btn" @click="toggleSortDirection">
+          Filter by: {{ sort === 'asc' ? 'ascending' : 'descending ' }}
+        </button>
+        <button class="btn" @click="refresh">Refresh</button>
+      </div>
       <addProduct />
       <div class="table-responsive">
         <table class="table">
@@ -66,7 +72,7 @@
               <th>Action</th>
             </tr>
           </thead>
-          <tbody v-for="product in products" :key="product">
+          <tbody v-for="product in filteredProducts" :key="product.prodID">
             <tr v-if="products">
               <td>{{ product.prodID }}</td>
               <td>{{ product.prodName }}</td>
@@ -113,39 +119,61 @@ export default {
     updateProduct,
     updateUser,
   },
+  data() {
+    return {
+      sort: "",
+      sortBy: "alphabetical",
+      sortMode:'prodID'
+    };
+  },
   computed: {
     users() {
-      return this.$store.state.users;
+      return this.$store.state.users || [];
     },
     products() {
-      return this.$store.state.products;
+      return this.$store.state.products || [];
     },
     product() {
-      return this.$store.state.product;
+      return this.$store.state.product || [];
     },
     user() {
-      return this.$store.state.user;
+      return this.$store.state.user || [];
+    },
+    filteredProducts() {
+      let filtered = [...this.products]
+      if (this.sortBy === "alphabetical") {
+        filtered = filtered.sort(
+          (a, b) =>
+            a.prodName.localeCompare(b.prodName) *
+            (this.sort === "asc" ? 1 : -1)
+        );
+      }
+      return filtered
     },
   },
-  mounted() {
-    this.$store.dispatch("fetchProducts");
-    this.$store.dispatch("fetchUsers");
+  async mounted() {
+    await this.$store.dispatch("fetchProducts");
+    await this.$store.dispatch("fetchUsers");
   },
   methods: {
     deleteProduct(prodID) {
       if (confirm("Are you sure you want to delete this product?")) {
         this.$store.dispatch("deleteProduct", prodID);
-        setTimeout(()=>{
-          location.reload()
-        }, 500)
+        setTimeout(() => {
+          location.reload();
+        }, 500);
       }
+    },
+    toggleSortDirection() {
+      console.log("reached")
+      this.sort = this.sort === 'asc' ? 'desc' : 'asc'
     },
     deleteUser(id) {
       if (confirm("Are you sure you want to delete this user?")) {
         this.$store.dispatch("deleteUser", id);
-        setTimeout(()=>{
-          location.reload()
-        }, 500)
+        setTimeout(() => {
+          location.reload();
+        }, 500);
       }
     },
   },
@@ -167,8 +195,8 @@ export default {
   box-shadow: 4px 4px black;
 }
 
-@media screen and (max-width:300px) {
-  .table{
+@media screen and (max-width: 300px) {
+  .table {
     width: 280px !important;
   }
 }
