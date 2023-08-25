@@ -121,7 +121,7 @@ export default {
 }
 
 .card {
-  height: 44rem !important;
+  /*height: 44rem !important;*/
   margin-bottom: 5rem;
   width: 75% !important;
 }
@@ -195,5 +195,12 @@ export default {
   .row{
     --bs-gutter-x:0;
   }
+}
+
+@media screen and (min-width: 1592px) {
+  .card{
+    width: 1591px;
+  }
+
 }
 </style>

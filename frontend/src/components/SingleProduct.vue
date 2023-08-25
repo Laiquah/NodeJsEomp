@@ -3,11 +3,12 @@
     <div v-if="product">
       <h1>{{ product.prodName }}</h1>
       <div>
-        <img :src="product.prodUrl" :alt="product.prodName" />
+        <img :src="product.prodUrl" :alt="product.prodName" loading="lazy" class="img-fluid" id="image" />
         <p>Category: {{ product.category }}</p>
-        <p>Description: {{ product.prodDesc }}</p>
+        <div>
+          Description: {{ product.prodDesc }}
+        </div>
         <p>Price: R{{ product.price }}</p>
-        <!-- Add other product details as needed -->
       </div>
     </div>
     <div v-else>
@@ -30,4 +31,12 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+#image{
+  width: 20rem;
+}
+
+h1{
+  
+}
+</style>
