@@ -134,7 +134,8 @@ export default {
 
 <style scoped>
 #sort2{
-  font-size:smaller;
+  font-size:large;
+  margin-right: 1.5rem;
 }
 
 

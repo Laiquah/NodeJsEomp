@@ -46,7 +46,7 @@
         </div>
         <div id="form">
           <button value="submit" type="submit" class="btn">submit</button>
-          <button type="reset" value="clear" id="clear" class="btn">clear</button>
+          <button type="reset" value="clear" class="btn">clear</button>
         </div>
       </form>
     </div>
@@ -55,7 +55,7 @@
         Thank you for stopping by ClayExpressions, hope you enjoyed your stay.
         See you next time!
       </h4>
-      <button class="btn2">
+      <button class="btn2 btn">
         <router-link to="/">back to the home page</router-link>
       </button>
     </div>
@@ -69,6 +69,10 @@ export default {};
 <style scoped>
 #card {
   margin-top: 2rem;
+}
+
+router-link:hover{
+  color: white !important;
 }
 
 .btn {
@@ -158,12 +162,14 @@ input[type="submit"]:hover {
 }
 
 .h4 {
-  margin-top: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   font-weight: bold;
 }
 
 .h1{
   margin-top: 3rem;
+  text-decoration: underline;
   margin-bottom: 2rem;
 }
 
