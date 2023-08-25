@@ -83,6 +83,7 @@ export default createStore({
           context.commit("setMsg", "Something went wrong");
         }
         if (msg) {
+          context.dispatch("fetchUsers")
           context.commit("setUser", msg);
         }
       } catch (e) {
@@ -95,6 +96,7 @@ export default createStore({
         const res = await axios.patch(`${miniURL}user/${payload.userID}`, payload.data);
         const { msg, err } = res.data
         if(msg){
+          context.dispatch("fetchUsers")
           context.commit("setUser", msg)
         } else{
           context.commit("setMsg", e)
@@ -127,6 +129,7 @@ export default createStore({
         const { msg, err } = await res.data;
         console.log(msg, err);
         if (msg) {
+          context.dispatch("fetchProducts")
           context.commit("setProduct", msg);
           context.commit("setSpinner", false);
         } else {
@@ -164,6 +167,7 @@ export default createStore({
           alert("an error has occured, please try again");
         }
         if (msg) {
+          context.dispatch("fetchProducts")
           context.commit("setProduct", msg);
           context.commit("setSpinner", false);
         } else {

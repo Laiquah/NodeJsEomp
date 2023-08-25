@@ -57,6 +57,7 @@
                     ><img
                       src="https://i.postimg.cc/2y6Cc6N1/Screenshot-2023-08-13-184438-removebg-preview.png"
                       class="img-fluid"
+                      loading="lazy"
                       alt="logo"
                   /></router-link>
                 </div>

@@ -17,6 +17,7 @@
             :src="product.prodUrl"
             class="card-img-top img-fluid"
             id="image"
+            loading="lazy"
             :alt="product.prodName"
           />
           <div class="card-body">

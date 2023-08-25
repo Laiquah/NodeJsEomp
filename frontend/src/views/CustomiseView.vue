@@ -18,7 +18,7 @@
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
                                   <div class="col-md-4">
-                                    <img src="https://i.postimg.cc/8zvbnQZF/diana-light-3-6m-ITm-My-GI-unsplash.jpg" class="img-fluid rounded-start" alt="cups">
+                                    <img src="https://i.postimg.cc/8zvbnQZF/diana-light-3-6m-ITm-My-GI-unsplash.jpg" class="img-fluid rounded-start" loading="lazy" alt="cups">
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body">
@@ -32,7 +32,7 @@
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
                                   <div class="col-md-4">
-                                    <img src="https://i.postimg.cc/268w9Mgv/b89462d3ee9165f1cdf7d3cf06f783f5.webp" class="img-fluid rounded-start" alt="jugs">
+                                    <img src="https://i.postimg.cc/268w9Mgv/b89462d3ee9165f1cdf7d3cf06f783f5.webp" class="img-fluid rounded-start" loading="lazy" alt="jugs">
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body">
@@ -46,7 +46,7 @@
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
                                   <div class="col-md-4">
-                                    <img src="https://i.postimg.cc/LXJGJJvn/97095-grande.webp" class="img-fluid rounded-start" alt="candlestick">
+                                    <img src="https://i.postimg.cc/LXJGJJvn/97095-grande.webp" loading="lazy" class="img-fluid rounded-start" alt="candlestick">
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body">
@@ -60,7 +60,7 @@
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
                                   <div class="col-md-4">
-                                    <img src="https://i.postimg.cc/9QTM7f8g/bowl-on-stilts-firebrick.jpg" class="img-fluid rounded-start" alt="bowls and ramekins">
+                                    <img src="https://i.postimg.cc/9QTM7f8g/bowl-on-stilts-firebrick.jpg" class="img-fluid rounded-start" loading="lazy" alt="bowls and ramekins">
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body">
@@ -74,7 +74,7 @@
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
                                   <div class="col-md-4">
-                                    <img src="https://i.postimg.cc/vTs71MCR/ceramic-lamp-base-white-34352110141636-984x.webp" class="img-fluid rounded-start" alt="lampbase">
+                                    <img src="https://i.postimg.cc/vTs71MCR/ceramic-lamp-base-white-34352110141636-984x.webp" class="img-fluid rounded-start" loading="lazy" alt="lampbase">
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body">
@@ -88,7 +88,7 @@
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
                                   <div class="col-md-4">
-                                    <img src="https://i.postimg.cc/6601BLBY/Bare-DIN-SAL-PLATE-SNOW-web-1800x1800.webp" class="img-fluid rounded-start" alt="plates">
+                                    <img src="https://i.post.cc/6601BLBY/Bare-DIN-SAL-PLATE-SNOW-web-1800x1800.webp" class="img-fluid rounded-start" alt="plates">
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body">
@@ -102,7 +102,7 @@
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
                                   <div class="col-md-4">
-                                    <img src="https://i.postimg.cc/268w9Mgv/b89462d3ee9165f1cdf7d3cf06f783f5.webp" class="img-fluid rounded-start" alt="platters and boats">
+                                    <img src="https://i.postimg.cc/268w9Mgv/b89462d3ee9165f1cdf7d3cf06f783f5.webp" loading="lazy" class="img-fluid rounded-start" alt="platters and boats">
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body">
@@ -116,7 +116,7 @@
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
                                   <div class="col-md-4">
-                                    <img src="https://i.postimg.cc/x1qvNkJV/oshin-khandelwal-fq839f-SNEuo-unsplash.jpg" class="img-fluid rounded-start " alt="vases">
+                                    <img src="https://i.postimg.cc/x1qvNkJV/oshin-khandelwal-fq839f-SNEuo-unsplash.jpg" class="img-fluid rounded-start" loading="lazy" alt="vases">
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body">
@@ -130,7 +130,7 @@
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
                                   <div class="col-md-4">
-                                    <img src="https://i.postimg.cc/8kMtt2KF/GUEST-26b95bbd-59a0-4805-a04e-ca5af98b3fe7.jpg" class="img-fluid rounded-start" alt="teapots">
+                                    <img src="https://i.postimg.cc/8kMtt2KF/GUEST-26b95bbd-59a0-4805-a04e-ca5af98b3fe7.jpg" loading="lazy" class="img-fluid rounded-start" alt="teapots">
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body">

@@ -131,9 +131,6 @@ export default {
         })
         .then(() => {
           console.log("Product updated!");
-          // setTimeout(()=>{
-          //   location.reload()
-          // }, 500)
         })
         .catch((err) => {
           console.error("Error updating: ", err);

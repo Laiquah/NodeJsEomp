@@ -86,7 +86,7 @@
               placeholder="password"
               v-model="model.user.userPass"
             />
-            <label for="Profile Picture:"></label>
+            <label for="profilePic">Profile Image:</label>
             <input
               required
               id="profilePic"
@@ -132,9 +132,6 @@ export default {
     createUser() {
       this.$store.dispatch("register", this.model.user);
       console.log(this.model.user);
-      setTimeout(() => {
-        location.reload();
-      }, 500);
     },
   },
 };

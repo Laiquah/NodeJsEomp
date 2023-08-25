@@ -112,10 +112,6 @@ export default {
   methods: {
     createProduct() {
       this.$store.dispatch("createProduct", this.model.product);
-      setTimeout(() => {
-        console.log("Reloading now...");
-        location.reload();
-      }, 500);
     },
   },
 };
