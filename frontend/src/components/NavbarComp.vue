@@ -20,7 +20,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
           <ul class="navbar-nav m-auto mb-2">
             <li class="nav-item">
               <router-link to="/">home</router-link>
@@ -55,6 +55,12 @@ img {
 
 .navbar {
   padding: 0;
+}
+
+.nav-item:hover{
+  transform: scale(1.3);
+  transition: ease-in;
+  text-shadow: 6px 4px #fcdec1;
 }
 
 .nav-item {

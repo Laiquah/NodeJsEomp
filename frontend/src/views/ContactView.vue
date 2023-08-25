@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="h1">keep in touch with us</h1>
-    <div class="login-card" id="card">
+    <div class="login-card" id="contact">
       <div class="card-header">
         <div class="log">Contact</div>
       </div>
@@ -55,7 +55,7 @@
         Thank you for stopping by ClayExpressions, hope you enjoyed your stay.
         See you next time!
       </h4>
-      <button class="btn">
+      <button class="btn2">
         <router-link to="/">back to the home page</router-link>
       </button>
     </div>
@@ -75,6 +75,14 @@ export default {};
   border: 2px solid #f7f4f1;
   background-color: #f7f4f1;
   margin-bottom: 1rem;
+  box-shadow: 4px 4px black;
+}
+.btn2 {
+  border: 2px solid #f7f4f1;
+  border-radius: 1rem;
+  background-color: #f7f4f1;
+  margin-bottom: 1rem;
+  padding: 1rem;
   box-shadow: 4px 4px black;
 }
 .login-card {
@@ -154,14 +162,29 @@ input[type="submit"]:hover {
   font-weight: bold;
 }
 
+.h1{
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+#contact{
+  margin-bottom: 3rem;
+}
+
 .btn {
   border: 2px solid #f7f4f1;
   background-color: #f7f4f1;
   box-shadow: 4px 4px black;
 }
 
+.btn:hover{
+  background-color: black;
+  box-shadow: 4px 4px white;
+  color: white;
+}
+
 @media screen and (max-width:300px){
-  #card{
+  #contact{
     width: 280px;
   }
 
@@ -169,6 +192,10 @@ input[type="submit"]:hover {
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
+  }
+
+  .h4{
+    margin-bottom: 2rem;
   }
 }
 
