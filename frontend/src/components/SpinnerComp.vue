@@ -10,4 +10,9 @@
 export default {};
 </script>
 
-<style scoped></style>
+<style scoped>
+.spinner-border{
+  margin-top: 3rem;
+  padding: 3rem;
+}
+</style>

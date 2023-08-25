@@ -86,6 +86,8 @@ button {
   position: relative;
   top: 30%;
   color: white;
+  font-weight: 50rem;
+  text-shadow: 2px 2px black;
 }
 
 .card1 {

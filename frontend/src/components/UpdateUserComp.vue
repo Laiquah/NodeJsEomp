@@ -33,37 +33,45 @@
             ></button>
           </div>
           <div class="modal-body">
+            <label>userID:</label>
             <input type="text" placeholder="ID" v-model="editingUser.userID" />
+            <label>first name:</label>
             <input
               type="text"
               placeholder="first name"
               v-model="editingUser.firstName"
             />
+            <label>last name:</label>
             <input
               type="text"
               placeholder="last name"
               v-model="editingUser.lastName"
             />
+            <label>Age:</label>
             <input
               type="number"
               placeholder="age"
               v-model="editingUser.userAge"
             />
+            <label>gender:</label>
             <input
               type="text"
               placeholder="gender"
               v-model="editingUser.gender"
             />
+            <label>user role:</label>
             <input
               type="text"
               placeholder="role"
               v-model="editingUser.userRole"
             />
+            <label>email address:</label>
             <input
               type="text"
               placeholder="email address"
               v-model="editingUser.emailAdd"
             />
+            <label>user profile:</label>
             <input
               type="text"
               placeholder="profile image"
@@ -147,5 +155,11 @@ export default {
   margin-bottom: 1rem;
   color: black;
   box-shadow: 4px 4px black;
+}
+
+input {
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 2rem;
 }
 </style>
