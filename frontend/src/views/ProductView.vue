@@ -14,13 +14,15 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 flex" v-if="products">
       <div class="col flex" v-for="product in filteredProducts" :key="product">
         <div class="card flex" id="test">
-          <img
-            :src="product.prodUrl"
-            class="card-img-top img-fluid"
-            id="image"
-            loading="lazy"
-            :alt="product.prodName"
-          />
+          <center>
+            <img
+              :src="product.prodUrl"
+              class="card-img-top img-fluid"
+              id="image"
+              loading="lazy"
+              :alt="product.prodName"
+            />
+          </center>
           <div class="card-body">
             <div class="title">
               <!-- 15% -->
@@ -128,6 +130,9 @@ export default {
 
 #image {
   aspect-ratio: 1/1;
+  width: 20rem;
+  height: 15rem;
+  margin-top: .5rem;
 }
 
 .btn {
@@ -136,9 +141,14 @@ export default {
   box-shadow: 4px 4px black;
 }
 
+.btn:hover{
+  background-color: black;
+  box-shadow: 4px 4px white;
+  color: white;
+}
+
 .card {
-  /*height: 44rem !important;*/
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   width: 75% !important;
 }
 
@@ -155,6 +165,8 @@ export default {
 }
 .quantity {
   height: 10%;
+  margin-top: .1rem;
+  margin-bottom: .8rem;
 }
 
 .description {
@@ -162,7 +174,7 @@ export default {
 }
 
 .card-text {
-  height: 132px;
+  height: 50px;
   overflow: auto;
 }
 
@@ -200,6 +212,15 @@ export default {
 @media screen and (max-width:700px) {
   .searchBTN{
     width: 690px;
+  }
+
+  #image{
+    width: 15rem;
+  }
+
+  .quantity{
+    margin-top: .1rem;
+    margin-bottom: .5rem;
   }
 
   .card{

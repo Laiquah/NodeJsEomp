@@ -14,13 +14,13 @@
     <div class="pro">
       <h2 class="feature">Featured Products:</h2>
       <div class="container">
-        <div class="row">
-          <div class="col-3">
+        <div class="row flex">
+          <div class="col-3 flex">
             <center>
-              <div class="card card-grid1">
-                <a href="/products" class="card1">
+              <div class="card card-grid1 flex">
+                <a href="/products" class="card1 flex">
                   <div
-                    class="card__bg1"
+                    class="card__bg1 flex"
                     style="
                       background-image: url(https://i.postimg.cc/J0XtrmbH/BOWL-Bleeksysie-4.jpg);
                     "
@@ -29,9 +29,9 @@
                     <h3 class="card__heading1 text-white"></h3>
                   </div>
                 </a>
-                <a href="/products" class="card1">
+                <a href="/products" class="card1 flex">
                   <div
-                    class="card__bg1"
+                    class="card__bg1 flex"
                     style="
                       background-image: url(https://i.postimg.cc/6q5dj8RL/IMG-577940-mm1-20-sec-at-f-56-ISO-200.jpg);
                     "
@@ -40,9 +40,9 @@
                     <h3 class="card__heading1 text-white"></h3>
                   </div>
                 </a>
-                <a href="/products" class="card1">
+                <a href="/products" class="card1 flex">
                   <div
-                    class="card__bg1"
+                    class="card__bg1 flex"
                     style="
                       background-image: url(https://i.postimg.cc/JndQBF1m/SPOON-Salt-1.jpg);
                     "
@@ -183,6 +183,12 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 280px;
+  }
+
+  .flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 </style>

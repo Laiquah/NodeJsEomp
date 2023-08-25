@@ -8,8 +8,8 @@
         </div>
         <div class="part2">
             <h3>step-to-step process on how to customise your piece</h3>
-            <div class="text">
-                Select Base: Choose a basic pottery piece like a mug or plate.
+            <div class="text1">
+                1) Select Base: Choose a basic pottery piece like a mug or plate.
                 <br>
                 <h4>types of pottery pieces you can choose from are:</h4>
                 <div>
@@ -88,7 +88,7 @@
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
                                   <div class="col-md-4">
-                                    <img src="https://i.post.cc/6601BLBY/Bare-DIN-SAL-PLATE-SNOW-web-1800x1800.webp" class="img-fluid rounded-start" alt="plates">
+                                    <img src="https://i.postimg.cc/tR19tV1R/bfd5cf-e3880c614b454fcfba4c9b61c01c79e6-mv2.webp" class="img-fluid rounded-start" alt="plates">
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body">
@@ -143,9 +143,12 @@
                     </div>
                 </div>
                 <br>
-                Design Plan: Decide the design, considering colors, patterns, textures, and motifs. Sketch or create a digital mockup.
+                2) Design Plan: Decide the design, considering colors, patterns, textures, and motifs. Sketch or create a digital mockup.
+                <br>
                 <br>
                 <p>Choose a design you would like to put on your pottery piece and email it to us. We will then paint it on for you and ship it to you.</p>
+                <br>
+                <a href="mailto:cotielaiquah@gmail.com" class="btn">email</a>
             </div>
         </div>   
     </div>
@@ -169,7 +172,11 @@ h4{
 }
 
 .text{
-    font-size: smaller;
+    font-size: medium;
+}
+
+.text1{
+    font-size: medium;
 }
 
 .part1{
@@ -183,5 +190,44 @@ h4{
 
 .img-fluid{
   aspect-ratio: 1/1;
+}
+
+.col-4{
+  padding: 2rem;
+}
+
+.btn {
+  border: 2px solid #f7f4f1;
+  background-color: #f7f4f1;
+  margin-bottom: 1rem;
+  box-shadow: 4px 4px black;
+  width: 10rem;
+}
+
+.btn:hover{
+  background-color: black;
+  box-shadow: 4px 4px white;
+  color: white !important;
+}
+
+@media screen and (max-width: 300px) {
+  .card{
+    width: 260px;
+  }
+
+  .row{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .img-fluid{
+    aspect-ratio: 1/1;
+  }
+
+  .card-title{
+    font-size: small;
+  }
 }
 </style>

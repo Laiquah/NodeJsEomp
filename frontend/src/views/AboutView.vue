@@ -152,23 +152,23 @@
     <section id="partnerships">
       <div class="row justify-content-center flex">
         <div class="col-3 flex">
-          <div class="card flex">
-            <img src="https://i.postimg.cc/rm700h25/Screenshot-2023-08-19-094202.png" alt="dhl" loading="lazy" class="img-fluid2">
+          <div class="card flex" id="card">
+            <img src="https://i.postimg.cc/rm700h25/Screenshot-2023-08-19-094202.png" alt="dhl" loading="lazy" class="img-fluid2" id="image">
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-3 flex" id="card">
           <div class="card">
-            <img src="https://i.postimg.cc/PxBbsWKr/Screenshot-2023-08-19-094634.png" alt="fedex" loading="lazy" class="img-fluid2">
+            <img src="https://i.postimg.cc/PxBbsWKr/Screenshot-2023-08-19-094634.png" alt="fedex" loading="lazy" class="img-fluid2" id="image">
           </div>
         </div>
-        <div class="col-3">
-          <div class="card">
-            <img src="https://i.postimg.cc/1trQqHTf/Screenshot-2023-08-19-095222.png" alt="doordash" loading="lazy" class="img-fluid2">
+        <div class="col-3 flex">
+          <div class="card" id="card">
+            <img src="https://i.postimg.cc/1trQqHTf/Screenshot-2023-08-19-095222.png" alt="doordash" loading="lazy" class="img-fluid2" id="image">
           </div>
         </div>
-        <div class="col-3">
-          <div class="card">
-            <img src="https://i.postimg.cc/yNcNd0yb/Screenshot-2023-08-19-095643.png" alt="aramex" loading="lazy" class="img-fluid2">
+        <div class="col-3 flex">
+          <div class="card" id="card">
+            <img src="https://i.postimg.cc/yNcNd0yb/Screenshot-2023-08-19-095643.png" alt="aramex" loading="lazy" class="img-fluid2" id="image">
           </div>
         </div>
       </div>
@@ -176,9 +176,7 @@
     <div class="customise">
       <button class="btn" @click="$router.push('/customise')">customise your product here</button>
     </div>
-    <button class="btn">
-      <router-link to="/products">browse our products</router-link>
-    </button>
+      <a href="/products" class="btn">browse our products</a>
   </div>
 </template>
 
@@ -208,7 +206,7 @@ export default {};
 }
 
 .logo{
-  width: 100rem;
+  width: 80rem;
 }
 
 h3 {
@@ -233,6 +231,10 @@ h3 {
   text-align: center;
   width: 20rem;
   height: 30rem;
+}
+
+a:hover{
+  color: white !important;
 }
 
 .paragraph1{
@@ -273,6 +275,13 @@ p {
   box-shadow: 4px 4px black;
 }
 
+.btn:hover{
+  background-color: black;
+  box-shadow: 4px 4px white;
+  color: white;
+}
+
+
 .div{
   padding: 2rem;
   display: flex;
@@ -295,7 +304,7 @@ p {
 }
 
 .img-fluid2{
-  width:16rem;
+  width:22rem;
 }
 
 .card svg {
@@ -319,8 +328,18 @@ p {
 
 @media screen and (max-width: 300px) {
   .col-3{
-    width: 280px;
+    width: 250px;
   }
+
+  #image{
+    width: 19rem;
+  }
+
+  .div{
+    display: flex;
+    flex-direction: column;
+  }
+  
   .carousel-inner{
     width: 280px;
   }
@@ -334,11 +353,11 @@ p {
   }
 
   .card{
-    width: 280px;
+    width: 250px;
   }
 
   .img-fluid2{
-    width: 13rem;
+    width: 10rem;
   }
 }
 
@@ -355,6 +374,15 @@ p {
 
   .img-fluid2{
     width: 35rem;
+  }
+
+  .div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #image{
+    width: 43rem;
   }
 }
 </style>

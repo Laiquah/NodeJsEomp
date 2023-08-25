@@ -2,6 +2,7 @@
   <div>
     <h1>Users</h1>
     <addUser />
+    <div class="table-responsive">
     <table class="table">
       <thead>
         <tr>
@@ -47,50 +48,53 @@
         </tr>
       </tbody>
     </table>
+  </div>
     <div>
       <h1>products</h1>
       <addProduct />
-      <table class="table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>name</th>
-            <th>quantity</th>
-            <th>price</th>
-            <th>category</th>
-            <th>description</th>
-            <th>product image</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody v-for="product in products" :key="product">
-          <tr v-if="products">
-            <td>{{ product.prodID }}</td>
-            <td>{{ product.prodName }}</td>
-            <td>{{ product.quantity }}</td>
-            <td>{{ product.price }}</td>
-            <td>{{ product.category }}</td>
-            <td>{{ product.prodDesc }}</td>
-            <td>
-              <img
-                :src="product.prodUrl"
-                :alt="product.prodUrl"
-                class="img-fluid image"
-                loading="lazy"
-              />
-            </td>
-            <td>
-              <updateProduct :product="product" />
-              <button @click="deleteProduct(product.prodID)" class="btn">
-                delete
-              </button>
-            </td>
-          </tr>
-          <tr v-else>
-            <Spinner />
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>name</th>
+              <th>quantity</th>
+              <th>price</th>
+              <th>category</th>
+              <th>description</th>
+              <th>product image</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody v-for="product in products" :key="product">
+            <tr v-if="products">
+              <td>{{ product.prodID }}</td>
+              <td>{{ product.prodName }}</td>
+              <td>{{ product.quantity }}</td>
+              <td>{{ product.price }}</td>
+              <td>{{ product.category }}</td>
+              <td>{{ product.prodDesc }}</td>
+              <td>
+                <img
+                  :src="product.prodUrl"
+                  :alt="product.prodUrl"
+                  class="img-fluid image"
+                  loading="lazy"
+                />
+              </td>
+              <td>
+                <updateProduct :product="product" />
+                <button @click="deleteProduct(product.prodID)" class="btn">
+                  delete
+                </button>
+              </td>
+            </tr>
+            <tr v-else>
+              <Spinner />
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </template>
