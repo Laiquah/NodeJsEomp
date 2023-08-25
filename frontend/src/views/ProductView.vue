@@ -10,7 +10,6 @@
         v-model="searchProducts"
       />
       <button class="btn" type="submit" @click="searchProducts">Search</button>
-      <button class="btn" @click="clearSearch">Clear Search</button>
     </form>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 flex" v-if="products">
       <div class="col flex" v-for="product in filteredProducts" :key="product">
